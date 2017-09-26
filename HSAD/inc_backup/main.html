@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>HS애드</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0 user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/respond-image.js" type="text/javascript"></script>
+    <!--[if lt IE 9]>
+    <script src="js/respond.js"></script>
+    <script src="js/html5.js"></script>
+    <script src="js/svg-change.js"></script>
+    <script src="js/jquery.backgroundSize.js" type="text/javascript"></script>
+    <![endif]-->
+<body>
+<div class="wrap main">
+    <!-- //e:导航 -->
+    <header>
+        <div id="logo-box">
+            <h1><a href="javascript:void(0)" title="메인으로 이동"><img src="img/common/hsad_logo.png" alt="HS Ad" class="hsad-logo"></a></h1>
+        </div>
+        <div class="menu">
+            <a href="javascript:void(0)" class="bt-menu ti-hidden" title="열림">
+                메뉴
+                <span></span>
+                <span></span>
+                <span class="last"></span>
+            </a>
+        </div>
+        <div class="lang-choice">
+            <a href="javascript:void(0)" class="active">KOR</a><span></span><a href="javascript:void(0)">ENG</a>
+        </div>
+        <div class="nav-util-mo">
+            <a href="#" title="공유" class="share"><img src="img/common/icon_share.png" alt="공유하기"></a>
+            <div class="share-box-mo">
+                <a href="javascript:sendSNS('fa_navi', '', 0)" class="share-fb" target="_blank" title="새창"><img src="img/common/sns_icon_facebook_color_on.png" alt="페이스북"></a>
+            </div>
+            <a href="#" onclick="validPopOpen('searchLayer','overflow',90,0)"><img src="img/common/icon_search.png" alt="검색"></a>
+        </div>
+    </header>
+    <nav id="gnb" tabindex="0">
+        <div class="container">
+            <div class="row nav-wrapper">
+                <ul>
+                    <li class="nav-block">
+                        <p class="first-depth">Company</p>
+                        <ul class="first-block">
+                            <li class="twice-depth"><a href="javascript:void(0)">Overview</a></li>
+                            <li class="twice-depth"><a href="javascript:void(0)">History</a></li>
+                            <li class="twice-depth"><a href="javascript:void(0)" title="메인화면의 VISION 관련된 부분으로 페이지 이동 됩니다">Vision<span class="blind">메인화면의 VISION 관련된 부분으로 페이지 이동 됩니다.</span></a></li>
+                            <li class="twice-depth"><a href="javascript:void(0)">Awards</a></li>
+                            <li class="twice-depth"><a href="javascript:void(0)">CSR</a></li>
+                            <li class="twice-depth"><a href="javascript:void(0)">Careers</a></li>
+                            <li class="twice-depth"><a href="javascript:void(0)">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-block middle">
+                        <p class="first-depth">Service</p>
+                        <ul class="second-block">
+                            <li class="twice-depth"><a href="javascript:void(0)">Account</a></li>
+                            <li class="twice-depth"><a href="javascript:void(0)">Digital</a></li>
+                            <li class="twice-depth"><a href="javascript:void(0)">Media</a></li>
+                            <li class="twice-depth"><a href="javascript:void(0)">Creative</a></li>
+                            <li class="twice-depth"><a href="javascript:void(0)">Promotion</a></li>
+                            <li class="twice-depth"><a href="javascript:void(0)">Retail</a></li>
+                            <li class="twice-depth"><a href="javascript:void(0)">OTR</a></li>
+                            <li class="twice-depth"><a href="javascript:void(0)">Project xT</a></li>
+                        </ul>
+                    </li>
+                    <li class="thrid-block"><a href="javascript:void(0)">Campaigns</a></li>
+                    <li class="thrid-block"><a href="javascript:void(0)">Global Network</a></li>
+                    <li class="thrid-block"><a href="javascript:void(0)">PR / Media</a></li>
+                </ul>
+                <div class="nav-block exp">
+                    <ul class="sns-block">
+                        <li><a href="javascript:void(0)" target="_blank" title="새창"><img src="img/common/sns_icon_facebook.svg" class="icon-facebook" alt="페이스북"><p>HS애드 <br>Facebook</p></a></li>
+                        <li><a href="javascript:void(0)" target="_blank" title="새창"><img src="img/common/sns_icon_blog02.png" class="icon-webzine" alt="블로그"><p>HS애드 <br>BLOG</p></a></li>
+                        <li><a href="javascript:void(0)" target="_blank" title="새창"><img src="img/common/sns_icon_blog.svg" class="icon-webzine" alt=""><p>HS애드 <br>Credential</p></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- //e:导航 -->
+    <!-- s:nav-util 侧边 -->
+    <div id="nav-util">
+        <a href="#" class="share">
+            <img src="img/common/icon_contact_share.svg" alt="공유하기">
+        </a>
+        <div class="share-box">
+            <a href="javascript:sendSNS('fa_navi', '', 0)" class="share-fb" title="공유하기-새창"><img src="img/common/sns_icon_facebook_color_on.png" alt="페이스북"></a>
+        </div>
+        <a href="#" class="search">
+            <img src="img/common/icon_contact_search.svg" alt="검색">
+        </a>
+        <a href="javascript:void(0)" class="contact">Contact Us</a>
+    </div>
+    <!-- s:nav-util 侧边 -->
+     <!-- s:btn-page-up 右底部 -->
+    <a class="btn-page-up" href="#">
+        <img src="img/common/icon_page_up.svg" id="icon-page-up" class="icon-page-up" alt="top">
+        <span></span>
+    </a>
+    <!-- s:btn-page-up 右底部 -->
+    <!-- s:home-box  start -->
+    <div id="home-box">
+        <div class="home-linart-wrap">
+            <div class="video-wrap">
+                <video loop autoplay style="width:100%; height:100%;">
+                   <source src="video/hs_typo.mp4" type="video/mp4" poster="img/main/bg_visual.jpg"/>
+                </video>
+                <!-- <img src="img/main/bg_visual.jpg" alt="메인 비디오 대체 이미지"> -->
+            </div>
+        </div>
+        <span class="main-line"></span>
+    </div>
+    <div class="main-copy1">
+        <img src="img/main/letter.png" data-src-base="img/main/" data-src="<767:letter_mo.png, >767:letter.png" alt="HYBRID SOLUTION" class="max">
+    </div>
+     <!-- s:home-box  end -->
+    <section id="content-wrap">
+    <!-- SERVICES  start-->
+        <div id="content-block1" class="container">
+            <div class="row title-wrap">
+                <div class="col-lg-12">
+                    <h1>SERVICES</h1>
+                    <p class="hidden-br desc hidden-mo" data="768">Big Idea for Improving<br>Your Brand Value</p>
+                </div>
+            </div>
+            <div class="row mb60">
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <a href="javascript:void(0)" class="service-list list1">
+                        <div>
+                            <span></span>
+                            <div class="text">
+                                <p class="big">ACCOUNT</p>
+                                <p class="small hidden-br hidden-mo" data="1200">브랜드의 문제를 진단하고 명쾌한 솔루션을 제시합니다</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <a href="javascript:void(0)" class="service-list list2">
+                        <div>
+                            <span></span>
+                            <div class="text">
+                                <p class="big">DIGITAL</p>
+                                <p class="small hidden-br hidden-mo" data="1200">뉴미디어 프런티어 정신으로 최적의 인터렉티브 마케팅 솔루션을 전개합니다</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <a href="javascript:void(0)" class="service-list list3">
+                        <div>
+                            <span></span>
+                            <div class="text">
+                                <p class="big">MEDIA</p>
+                                <p class="small hidden-br hidden-mo" data="1200">강력한 맨파워를 통해 Full media service를 약속합니다</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <a href="javascript:void(0)" class="service-list list4">
+                        <div>
+                            <span></span>
+                            <div class="text">
+                                <p class="big">CREATIVE</p>
+                                <p class="small hidden-br hidden-mo" data="1200">브랜드를 살아 숨쉬게 하는 크리에이티브 아이디어를 제공합니다</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <a href="javascript:void(0)" class="service-list list5">
+                        <div>
+                            <span></span>
+                            <div class="text">
+                                <p class="big">PROMOTION</p>
+                                <p class="small hidden-br hidden-mo" data="1200">브랜드를 생활 속에서 가장 드라마틱하게 만나는 순간을 만듭니다</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <a href="javascript:void(0)" class="service-list list6">
+                        <div>
+                            <span></span>
+                            <div class="text">
+                                <p class="big">RETAIL</p>
+                                <p class="small hidden-br hidden-mo" data="1200">공간 안에서 사람과 브랜드가 연결되는 이 모든 순간을 연구합니다</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <a href="javascript:void(0)" class="service-list list7">
+                        <div>
+                            <span></span>
+                            <div class="text">
+                                <p class="big">OTR</p>
+                                <p class="small hidden-br hidden-mo" data="1200">광고적 상상력으로 제품과 브랜드를 변신시켜 드립니다</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <a href="javascript:void(0)" class="service-list list8">
+                        <div>
+                            <span></span>
+                            <div class="text">
+                                <p class="big">PROJECT xT</p>
+                                <p class="small hidden-br hidden-mo" data="1200">이질적인 요소의 의미있는 결합으로 새로운 접근과 탈 프레임을 지향합니다</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- SERVICES  end-->
+        <!-- s:campaign-list start -->
+        <div id="content-block2" class="container">
+            <div class="row title-wrap mt50">
+                <div class="col-lg-12">
+                    <h1>CAMPAIGNS</h1>
+                    <p class="desc hidden-mo">Make Something Different</p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- s:campaign-list -->
+                <div class="campaign-list" style="opacity: 1;">
+                   <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="case-study">
+                            <a href="javascript:void(0)">
+                                <div class="thumb">
+                                    <img src="img/temp/thum_01.jpg" alt="">
+                                </div>
+                                <p class="tit"><span></span>사무엘과 코난 오브라이언 코난쇼에서 재회!</p>
+                                <span class="bg-gradation"></span>
+                            </a>
+                            <div class="detail">
+                                <p><span></span>한국관광공사</p>
+                                <div class="share">
+                                    <a href="javascript:void(0)" title="해당 게시글 페이지로 이동"><img src="img/common/icon_enterance_long.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="card-tvc">
+                            <a href="javascript:void(0)">
+                                <div class="thumb">
+                                    <img src="img/temp/thum_02.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <p class="tit">KB손해보험 바이럴</p>
+                                    <p class="cate"><span></span>KB손해보험</p>
+                                </div>
+                            </a>
+                            <div class="share">
+                                <a href="javascript:void(0)" title="해당 게시글 페이지로 이동"><img src="img/common/icon_enterance.png" alt="" class="roll"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="card-tvc">
+                            <a href="javascript:void(0)">
+                                <div class="thumb">
+                                    <img src="img/temp/thum_03.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <p class="tit">LG생활건강 후 비첩자생에센스</p>
+                                    <p class="cate"><span></span>LG생활건강</p>
+                                </div>
+                            </a>
+                            <div class="share">
+                                <a href="javascript:void(0)" title="해당 게시글 페이지로 이동"><img src="img/common/icon_enterance.png" alt="" class="roll"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="card-tvc">
+                            <a href="javascript:void(0)">
+                                <div class="thumb">
+                                    <img src="img/temp/thum_04.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <p class="tit">LG전자 LG트롬스타일러</p>
+                                    <p class="cate"><span></span>LG전자</p>
+                                </div>
+                            </a>
+                            <div class="share">
+                                <a href="javascript:void(0)" title="해당 게시글 페이지로 이동"><img src="img/common/icon_enterance.png" alt="" class="roll"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="card-tvc">
+                            <a href="javascript:void(0)">
+                                <div class="thumb">
+                                    <img src="img/temp/thum_05.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <p class="tit">대한항공 리우(1일-18일)</p>
+                                    <p class="cate"><span></span>대한항공</p>
+                                </div>
+                            </a>
+                            <div class="share">
+                                <a href="javascript:void(0)" title="해당 게시글 페이지로 이동"><img src="img/common/icon_enterance.png" alt="" class="roll"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="case-study">
+                            <a href="javascript:void(0)">
+                                <div class="thumb">
+                                    <img src="img/temp/thum_06.jpg" alt="">
+                                </div>
+                                <p class="tit"><span></span>LG 시그니처 "가전 제품"을 완성하다</p>
+                                <span class="bg-gradation"></span>
+                            </a>
+                            <div class="detail">
+                                <p><span></span>LG전자</p>
+                                <div class="share">
+                                    <a href="javascript:void(0)" title="해당 게시글 페이지로 이동"><img src="img/common/icon_enterance_long.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                <!-- //e:campaign-list -->
+            </div>
+            <div class="row ta-c pb80">
+                <div class="col-xs-12">
+                    <a href="javascript:void(0)" title="캠페인 리스트 페이지로 이동" class="btn-more"><span>더보기</span></a>
+                </div>
+            </div>
+        </div>
+        <!-- s:campaign-list end -->
+    </section>
+     <!-- s:footer start -->
+    <footer id='footer'>
+        <div class="container">
+            <p>Copyright ⓒ HS Ad China Co., Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+     <!-- s:footer end -->
+</div><!-- END wrap-->
+</body>
+
+
+</html>

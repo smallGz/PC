@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>MEDIA SERVICE</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0 user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/respond-image.js" type="text/javascript"></script>
+    <!--[if lt IE 9]>
+    <script src="js/respond.js"></script>
+    <script src="js/html5.js"></script>
+    <script src="js/svg-change.js"></script>
+    <script src="js/jquery.backgroundSize.js" type="text/javascript"></script>
+    <![endif]-->
+<body>
+<div class="wrap">
+
+    <header class="sub">
+        <div id="logo-box">
+            <h1><a href="index.html" title="메인으로 이동"><img src="img/common/hsad_logo.png" alt="HS Ad" class="hsad-logo"></a></h1>
+        </div>
+        <div class="menu">
+            <a href="javascript:void(0)" class="bt-menu ti-hidden" title="열림">
+                메뉴
+                <span></span>
+                <span></span>
+                <span class="last"></span>
+            </a>
+        </div>
+        <div class="lang-choice">
+            <a href="http://www.hsadchina.com/home/kr/" class="active">KOR</a><span></span><a href="http://www.hsadchina.com/home/">CHN</a>
+        </div>
+        <div class="nav-util-mo">
+            <a href="javascript:void(0)" class="nav-a-1">제안서</a>
+            <a href="contactus.html" class="contact">견적문의</a>
+        </div>
+    </header>
+
+    <nav id="gnb" tabindex="0">
+        <div class="container">
+            <div class="row nav-wrapper">
+                <ul>
+                    <li class="nav-block">
+                        <p class="first-depth">Introduction</p>
+                        <ul class="first-block">
+                            <li class="twice-depth"><a href="index.html">Overview</a></li>
+                            <li class="twice-depth"><a href="history.html">HS Ad China History</a></li>
+                            <li class="twice-depth"><a href="vision.html">Vision</a></li>
+                            <li class="twice-depth"><a href="portfolio.html">Portfolio</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-block">
+                        <p class="first-depth">Baidu Service</p>
+                        <ul class="second-block">
+                            <li class="twice-depth"><a href="baidu_service.html">Baidu 광고 서비스</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-block">
+                        <p class="first-depth">SNS Service</p>
+                        <ul class="second-block">
+                            <li class="twice-depth"><a href="sns_service.html">HS Ad 플랫폼 소개</a></li>
+                            <li class="twice-depth"><a href="sns_service.html#sns_service_02" onclick="navCon();$('.bt-menu').removeClass('open').attr('title','열림');"> - CONTENTS</a></li>
+                            <li class="twice-depth"><a href="sns_service.html#sns_service_03" onclick="navCon();$('.bt-menu').removeClass('open').attr('title','열림');"> - EVENT</a></li>
+                            <li class="twice-depth"><a href="sns_service.html#sns_service_04" onclick="navCon();$('.bt-menu').removeClass('open').attr('title','열림');"> - 위챗 홈페이지</a></li>
+                            <li class="twice-depth"><a href="sns_service.html#sns_service_05" onclick="navCon();$('.bt-menu').removeClass('open').attr('title','열림');"> - 위챗 쇼핑몰 구축</a></li>
+                            <li class="twice-depth"><a href="sns_service.html#sns_service_06" onclick="navCon();$('.bt-menu').removeClass('open').attr('title','열림');"> - 모바일 BBS</a></li>
+                            <li class="twice-depth"><a href="sns_service.html#sns_service_07" onclick="navCon();$('.bt-menu').removeClass('open').attr('title','열림');"> - 모바일 쿠폰</a></li>
+                            <li class="twice-depth"><a href="viral.html">Viral 마케팅</a></li>
+                            <li class="twice-depth"><a href="wanghong.html">왕홍 마케팅</a></li>
+                            <li class="twice-depth"><a href="sns_service_policy.html">SNS 운영 서비스 정책</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-block">
+                        <p class="first-depth">Media Service</p>
+                        <ul class="second-block">
+                            <li class="twice-depth"><a href="media_service.html">웨이보 Ad</a></li>
+                            <li class="twice-depth"><a href="media_service.html#media_service_02" onclick="navCon();$('.bt-menu').removeClass('open').attr('title','열림');">Wechat Ad</a></li>
+                            <li class="twice-depth"><a href="media_service.html#media_service_03" onclick="navCon();$('.bt-menu').removeClass('open').attr('title','열림');">DSP Ad</a></li>
+                            <li class="twice-depth"><a href="media_service.html#media_service_04" onclick="navCon();$('.bt-menu').removeClass('open').attr('title','열림');">PR</a></li>
+                            <li class="twice-depth"><a href="media_service_policy.html">Media Service 정책</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-block">
+                        <p class="first-depth">Contact Us</p>
+                        <ul class="second-block">
+                            <li class="twice-depth"><a href="contactus.html">Contact Us</a></li>
+                            <li class="twice-depth"><a href="contactus.html">견적문의</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- s:nav-util 侧边 -->
+    <div id="nav-util">
+        <span class="nav-a-1"><img src="img/contact-icon.png" alt=""></span>
+        <a href="contactus.html" class="contact">연락처 및 견적문의</a>
+    </div>
+    <!-- s:nav-util 侧边 -->
+     <!-- s:btn-page-up 右底部 -->
+    <a class="btn-page-up" href="#">
+        <img src="img/common/icon_page_up.svg" id="icon-page-up" class="icon-page-up" alt="top">
+        <span></span>
+    </a>
+    <!-- s:btn-page-up 右底部 -->
+    <!-- s:page copy -->
+    <div class="page-copy line">
+        <div class="page-title-wrap">
+            <a href="javascript:history.back();" class="history-back">
+                <img src="img/common/icon_page_back.svg" class="icon roll" alt="뒤로">
+            </a>
+            <h2>SNS SERVICE</h2>
+        </div>
+        <p>급변하는 매체 환경을 반영한<br>최신의 미디어 모델로<br>최적의 미디어 Solution을 제공합니다</p>
+        <span></span>
+    </div>
+    <!-- //e:page copy -->
+    <!-- media start -->
+    <section class="content-wrap">
+        <!-- s:back-gray  -->
+            <div class="container media-wrap1" id="contentsWrap">
+                <div class="row mb50">
+                    <div class="col-md-12 ta-c">
+                        <div class="line-box">
+                            <h4>웨이보 광고</h4>
+                            <p class="hidden-br" data="768">웨이보 펀스통 광고는 목적에 따라 여러 노출 형식을 활용 할 수 있으며<br>타켓팅 및 과금형식 설정으로 실시간 집행 가능한 광고 상품</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="red-box type02">
+                            <dl>
+                                <dt>노출형식</dt>
+                                <dd>빅데이터 활용한 타겟 유저에게 광고 노출</dd>
+                            </dl>
+                            <div>
+                                <ul>
+                                    <li>콘텐츠형 (텍스트+이미지or영상)</li>
+                                    <li>APP 다운로드형</li>
+                                    <li>기업계정 팔로우형</li>
+                                    <li>응용형</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="red-box type02">
+                            <dl>
+                                <dt>노출위치</dt>
+                                 <dd>포스팅 내용 3번째 위치 발송</dd>
+                            </dl>
+                            <div>
+                                <ul>
+                                    <li>PC</li>
+                                    <li>MOBILE</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="red-box type02">
+                            <dl>
+                                <dt>광고비용</dt>
+                                <dd>충전후 설정한 과금형식에따라 비용 삭감</dd>
+                            </dl>
+                            <div>
+                                <ul>
+                                    <li>CPM (Click per Mille) : 1000회 노출에 대해 과금되는 방식</li>
+                                    <li>CPE (Click per Engagement) : 1회 클릭 발생시 과금되는 방식</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt12 mb12">
+                    <div class="col-md-12">
+                        <div class="red-box type02">
+                            <dl>
+                                <dt>타켓팅설정</dt>
+                                <dd>세분화 타겟 설정 후 광고 집행</dd>
+                            </dl>
+                            <div>
+                                <ul>
+                                    <li>타겟 유저 성별/연령/지역/흥미</li>
+                                    <li>광고 기간 및 노출시간</li>
+                                    <li>경쟁사, 브랜드사, 온라인쇼핑몰 등 팔로잉 유저</li>
+                                    <li>노출 기기 (PC, iOS, Android)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- media end -->
+    <!-- promotion start -->
+    <section class="content-wrap" id="media_service_02">
+        <div class="media-wrap1 service-promotion">
+            <div class="back-gray">
+                <div class="container" id="contentsWrap">
+                <div class="row mb50">
+                    <div class="col-md-12 ta-c">
+                        <div class="line-box">
+                            <h4>위챗 광고</h4>
+                            <p class="hidden-br mb40" data="768">위챗 모멘트 광고는 아래 5가지의 목적으로 운영되며<br>사진,영상,HTML5,URL 연결 등의 광고 형식을 통하여 네이티브 광고 노출가능</p>
+                        </div>
+                    </div>
+                   <div class="row pb80">
+                       <div class="service-promotion-box">
+                           <p class="promotion-tit">브랜드 홍보<span></span></p>
+                           <p>브랜드 및 이벤트 광고 홍보</p>
+                       </div>
+                       <div class="service-promotion-box">
+                           <p class="promotion-tit">공중계정 홍보<span></span></p>
+                           <p>구독계정 & 서비스 계정 홍보</p>
+                       </div>
+                       <div class="service-promotion-box">
+                           <p class="promotion-tit">모바일 APP 홍보<span></span></p>
+                           <p>안드로이드 & IOS 모바일 앱 홍보</p>
+                       </div>
+                       <div class="service-promotion-box">
+                           <p class="promotion-tit">웨이신 쿠폰 홍보<span></span></p>
+                           <p>상점 쿠폰 및 할인권 홍보</p>
+                       </div>
+                       <div class="service-promotion-box">
+                           <p class="promotion-tit">본문 홍보<span></span></p>
+                           <p>위챗 상점 상품 홍보</p>
+                       </div>
+                       <div class="service-promotion-box">
+                           <p class="promotion-tit">타게팅 홍보<span></span></p>
+                           <p>지역, 성별, 나이, 학력, 흥미, 모바일 기기 OS, 접속환경, 결혼유무</p>
+                       </div>
+                   </div>
+                    <p class="hidden-br desc hidden-mo" data="768" style="font-size:1.5rem;line-height: 1.2;">
+		<center><img src="img/portfolio/39.jpg" alt=""></center>
+	     </p>
+
+               </div>
+            </div>
+        </div>
+    </section>
+    <!-- promotion end -->
+
+
+    <section class="content-wrap" id="media_service_03">
+            <div class="container awards dsp" id="contentsWrap">
+                <div class="row">
+                    <div class="col-md-12 ta-c">
+                        <div class="line-box">
+                            <h4 class="mt40 mb40">DSP 광고</h4>
+                        </div>
+                    </div>
+                <div class="award-info">
+                    <div class="col-md-2 col-sm-2 col-xs-12">
+                        <h3 class="mt100 hidden-br" data="768" style="text-align:center">미디어<br>특징</h3>
+                    </div>
+                    <div class="col-md-offset-1 col-md-8 col-sm-offset-1 col-sm-6 col-xs-12  mb80">
+                        <p class="award-text">지역, 연령, 검색 선호도, 디바이스, 시간, 현 위치, 검색량 등 다양한 데이터 기반 타겟팅 광고 (Banner, Video)<br>정교한 타켓팅이 가능한 미디어로 Big Data분석을 통해 핵심 타겟에게 노출하여 판촉페이지로 랜딩 유도 (PC, Mobile)</p>
+                        <img src="img/portfolio/40.jpg" width="70%" style="margin:3.125rem 0 0 1.875rem">
+                    </div>
+                    <span class="gray-vline-1"></span>
+                </div>
+            </div>
+            </div>
+    </section>
+
+
+    <!-- retail end -->
+    <section class="content-wrap pb80 retail">
+        <div class="container b-top">
+            <div class="row mt64 mb64">
+                <div class="col-md-4 col-sm-6">
+                    <h4>운영전략</h4>
+                    <span class="red-line"></span>
+                    <p>유저에 구매 및 검색 등 온라인 행위에 의하여 다양한 타켓팅 카테고리로 설정, 효율적으로 집행</p>
+					<p>랜딩페이지를 징동이나 티몰 프로모션 페이지로 연결하여 온라인 프로모션 효과 제고</p>
+                </div>
+                <div class="col-md-4 col-sm-6 mo-mt30">
+                    <h4>광고위치</h4>
+                    <span class="red-line"></span>
+                    <p>Main, 기타 페이지, APP등 소비자 쿠키 정보 분석 후 다양한 카테고리의 페이지에 노출</p>
+                </div>
+                <div class="col-md-4 col-sm-6 mo-mt30">
+                    <h4>기타</h4>
+                    <span class="red-line"></span>
+                    <p>DSP 광고 점유율 60%,  중국 DSP 업계 1위 협력사와 제휴</p>
+					<p>약 60만개 모바일 앱, PC 웹사이트와 광고 가능</p>
+                </div>
+            </div>
+			<!--
+            <div class="award-list">
+                <div class="row pt60 b-top">
+                    <div class="col-md-2">
+                        <h4 class="hidden-br" date="768">DSP<br>광고예시</h4>
+                        <span class="red-line"></span>
+                    </div>
+                    <div class="col-md-10">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="img/company/img_awards14.jpg" class="max">
+                                    <p class="mt16 hidden-br" data="768">팝업형식</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="img/company/img_awards15.jpg" alt="대한항공 '대학생 디자인 공모전' 사진" class="max">
+                                    <p class="mt16 hidden-br" data="768">우측 배너</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="img/company/img_awards16.jpg" alt="대한항공 '게스트하우스' 광고 이미지" class="max">
+                                    <p class="mt16 hidden-br" data="768">가로형 배너</p>
+                                </div>  
+                            </div>  
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="img/company/img_awards14.jpg" alt="LG전자 '다시 만난 우리 문화유산전' 사진" class="max">
+                                    <p class="mt16 hidden-br" data="768">동영상 정지 팝업</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="img/company/img_awards15.jpg" alt="대한항공 '대학생 디자인 공모전' 사진" class="max">
+                                    <p class="mt16 hidden-br" data="768">모바일 팝업</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="img/company/img_awards16.jpg" alt="대한항공 '게스트하우스' 광고 이미지" class="max">
+                                    <p class="mt16 hidden-br" data="768">모바일 배너</p>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+			-->
+
+        </div>
+    </section>
+    <!-- retail end -->
+        <section class="content-wrap" id="media_service_04">
+        <div class="back-gray">
+            <div class="container awards dsp" id="contentsWrap">
+                <div class="row b-bottom">
+                    <div class="col-md-12 ta-c">
+                        <div class="line-box">
+                            <h4 class="mt40 mb40">PR 소개</h4>
+                        </div>
+                    </div>
+                <div class="award-info">
+                    <div class="col-md-2 col-sm-2 col-xs-12">
+                        <h3 class="mt100 hidden-br" data="768">미디어<br>특징</h3>
+                    </div>
+                    <div class="col-md-offset-1 col-md-8 col-sm-offset-1 col-sm-6 col-xs-12  mb80">
+                        <p class="award-text">
+                            중국 주요 생활, 뉴스, 패션, 미식, 한국 관련 미디어 내 PR 기사 릴리즈<br>
+                            타겟에 가장 적합한 대표적 A급 미디어 선정<br>
+                           여론 모니터링을 통한 업계 및 경쟁사 PR 모니터링<br>
+                        </p>
+                        <img src="img/portfolio/41.jpg" width="70%" style="margin:3.125rem 0 0 1.875rem">
+                    </div>
+                    <span class="gray-vline-1"></span>
+                </div>
+            </div>
+                <div class="row mt64 mb64">
+                    <div class="col-md-4 col-sm-6">
+                        <h4>운영전략</h4>
+                        <span class="red-line"></span>
+                        <p>Text / Image 형식으로 PC, Mobile 기사에 노출</p>
+                        <p>PR 기사 제목 및 기사 내용 콘텐츠를 활용한  SEO</p>
+                    </div>
+                    <div class="col-md-4 col-sm-6 mo-mt30">
+                        <h4>광고위치</h4>
+                        <span class="red-line"></span>
+                        <p>주요 생활, 뉴스 포탈, 패션, 미식 등 미디어</p>
+                    </div>
+                    <div class="col-md-4 col-sm-6 mo-mt30">
+                        <h4>기타</h4>
+                        <span class="red-line"></span>
+                        <p>브랜드 관련, 제품 정보 등 다양한 정보 직접적으로 노출</p>
+                        <p>포탈 검색 노출 콘텐츠 제고 (브랜드 검색 후 기사 노출)</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </section>
+
+     <!-- s:footer start -->
+    <footer id='footer'>
+        <div class="container">
+            <p>Copyright ⓒ HS Ad China Co., Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+     <!-- s:footer end -->
+
+</div><!-- END wrap-->
+</body>
+
+
+</html>

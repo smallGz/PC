@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>History</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0 user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/respond-image.js" type="text/javascript"></script>
+    <!--[if lt IE 9]>
+    <script src="js/respond.js"></script>
+    <script src="js/html5.js"></script>
+    <script src="js/svg-change.js"></script>
+    <script src="js/jquery.backgroundSize.js" type="text/javascript"></script>
+    <![endif]-->
+<body>
+<div class="wrap">
+    <!-- //e:导航 -->
+    <header class="sub">
+        <div id="logo-box">
+            <h1><a href="javascript:void(0)" title="메인으로 이동"><img src="img/common/hsad_logo.png" alt="HS Ad" class="hsad-logo"></a></h1>
+        </div>
+        <div class="menu">
+            <a href="javascript:void(0)" class="bt-menu ti-hidden" title="열림">
+                메뉴
+                <span></span>
+                <span></span>
+                <span class="last"></span>
+            </a>
+        </div>
+        <div class="lang-choice">
+            <a href="javascript:void(0)" class="active">KOR</a><span></span><a href="javascript:void(0)">ENG</a>
+        </div>
+        <div class="nav-util-mo">
+            <a href="javascript:void(0)" title="공유" class="share"><img src="img/common/icon_share.png" alt="공유하기"></a>
+            <div class="share-box-mo">
+                <a href="javascript:void(0)" class="share-fb" target="_blank" title="새창"><img src="img/common/sns_icon_facebook_color_on.png" alt="페이스북"></a>
+            </div>
+            <a href="javascript:void(0)"><img src="img/common/icon_search.png" alt="검색"></a>
+        </div>
+    </header>
+    <nav id="gnb" tabindex="0">
+        <div class="container">
+            <div class="row nav-wrapper">
+                <ul>
+                    <li class="nav-block">
+                        <p class="first-depth">Company</p>
+                        <ul class="first-block">
+                            <li class="twice-depth"><a href="javascript:void(0)">Overview</a></li>
+                            <li class="twice-depth"><a href="javascript:void(0)">History</a></li>
+                            <li class="twice-depth"><a href="javascript:void(0)" title="메인화면의 VISION 관련된 부분으로 페이지 이동 됩니다">Vision<span class="blind">메인화면의 VISION 관련된 부분으로 페이지 이동 됩니다.</span></a></li>
+                            <li class="twice-depth"><a href="javascript:void(0)">Awards</a></li>
+                            <li class="twice-depth"><a href="javascript:void(0)">CSR</a></li>
+                            <li class="twice-depth"><a href="javascript:void(0)">Careers</a></li>
+                            <li class="twice-depth"><a href="javascript:void(0)">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-block middle">
+                        <p class="first-depth">Service</p>
+                        <ul class="second-block">
+                            <li class="twice-depth"><a href="javascript:void(0)">Account</a></li>
+                            <li class="twice-depth"><a href="javascript:void(0)">Digital</a></li>
+                            <li class="twice-depth"><a href="javascript:void(0)">Media</a></li>
+                            <li class="twice-depth"><a href="javascript:void(0)">Creative</a></li>
+                            <li class="twice-depth"><a href="javascript:void(0)">Promotion</a></li>
+                            <li class="twice-depth"><a href="javascript:void(0)">Retail</a></li>
+                            <li class="twice-depth"><a href="javascript:void(0)">OTR</a></li>
+                            <li class="twice-depth"><a href="javascript:void(0)">Project xT</a></li>
+                        </ul>
+                    </li>
+                    <li class="thrid-block"><a href="javascript:void(0)">Campaigns</a></li>
+                    <li class="thrid-block"><a href="javascript:void(0)">Global Network</a></li>
+                    <li class="thrid-block"><a href="javascript:void(0)">PR / Media</a></li>
+                </ul>
+                <div class="nav-block exp">
+                    <ul class="sns-block">
+                        <li><a href="javascript:void(0)" target="_blank" title="새창"><img src="img/common/sns_icon_facebook.svg" class="icon-facebook" alt="페이스북"><p>HS애드 <br>Facebook</p></a></li>
+                        <li><a href="javascript:void(0)" target="_blank" title="새창"><img src="img/common/sns_icon_blog02.png" class="icon-webzine" alt="블로그"><p>HS애드 <br>BLOG</p></a></li>
+                        <li><a href="javascript:void(0)" target="_blank" title="새창"><img src="img/common/sns_icon_blog.svg" class="icon-webzine" alt=""><p>HS애드 <br>Credential</p></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- //e:导航 -->
+    <!-- s:nav-util 侧边 -->
+    <div id="nav-util">
+        <a href="javascript:void(0)" class="share">
+            <img src="img/common/icon_contact_share.svg" alt="공유하기">
+        </a>
+        <div class="share-box">
+            <a href="javascript:void(0)" class="share-fb" title="공유하기-새창"><img src="img/common/sns_icon_facebook_color_on.png" alt="페이스북"></a>
+        </div>
+        <a href="javascript:void(0)" class="search">
+            <img src="img/common/icon_contact_search.svg" alt="검색">
+        </a>
+        <a href="javascript:void(0)" class="contact">Contact Us</a>
+    </div>
+    <!-- s:nav-util 侧边 -->
+     <!-- s:btn-page-up 右底部 -->
+    <a class="btn-page-up" href="#">
+        <img src="img/common/icon_page_up.svg" id="icon-page-up" class="icon-page-up" alt="top">
+        <span></span>
+    </a>
+    <!-- s:btn-page-up 右底部 -->
+    <!-- s:page copy -->
+    <div class="page-copy line">
+        <div class="page-title-wrap">
+            <a href="javascript:void(0)" class="history-back">
+                <img src="img/common/icon_page_back.svg" class="icon roll" alt="뒤로">
+            </a>
+            <h2>History</h2>
+        </div>
+        <p>광고주를 위해, 브랜드를 위해, 소비자를 위해<br> 지난 반 세기 넘게 땀흘려 왔습니다.</p>
+        <span></span>
+    </div>
+    <!-- //e:page copy -->
+    <!-- s:history -->
+    <section class="content-wrap pb80" id="contentsWrap">
+        <div class="row history-wrap">
+            <div class="col-md-6 col-sm-12 history-list ta-r">
+                <div class="year">2017</div>
+                <p class="mb10">서울영상광고제 '2016 올해의 광고회사' 선정</p>
+            </div>
+            <div class="col-md-offset-6 col-md-6 col-sm-12 history-list">
+                <div class="year">2016</div>
+                <p class="mb10">대한민국광고대상 6년 연속 대상 수상</p>
+            </div>
+            <div class="col-md-6 col-sm-12 history-list ta-r">
+                <div class="year">2014</div>
+                <p class="mb10">지투알, 창립 30주년</p>
+            </div>
+            <div class="col-md-offset-6 col-md-6 col-sm-12 history-list">
+                <div class="year">2012</div>
+                <p class="mb10">사사(社史) &lt;LG광고 반세기&gt; 발간</p>
+                <div class="history-img"><img src="img/company/img_history1.jpg" alt="2012년 사사(社史) 'LG광고 반세기' 발간 사진"></div>
+            </div>
+           
+        </div>
+    </section>
+    <!-- //e:history -->
+    <!-- //e:Account -->
+    <div class="content-wrap">
+        <section class="wrap back-gray service-account">
+                <div class="container" id="contentsWrap">
+                    <div class="row">
+                        <div class="col-md-8 col-md-push-2">
+                            <p class="service-intro">
+                                “내가 그의 이름을 불러주었을 때 그는 나에게로 와서 꽃이 되었다”<br>
+                                브랜드는 소비자가 불러주어야 비로소 시장에서 살아있게 됩니다<br>
+                                HS애드의 광고는 고객의 인사이트를 간파하여 최적의 메시지와 채널, 전략을 전개하는 하이브리드 솔루션을 펼칩니다<br>
+                                ACCOUNT가 바로, 하이브리드 솔루션의 콘트롤 타워입니다
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row box-white-wrap">
+                        <div class="col-md-4 col-sm-12">
+                            <div class="box-white">
+                                <p class="ta-c"><img src="img/common/icon_service_search.png" alt=""></p>
+                                <h4 class="ta-c">소비자의 니즈를<br>찾아내다<span></span></h4>
+                                <p class="des">
+                                    근본적인 마케팅 환경 변화와 미세하고 빠르게 변화하는 소비자의 니즈를 찾기 위해 기존의 설문 조사식 소비자 연구에서 벗어나 소비자 행동을 직접 측정하고 , 실시간 데이터를 수집/ 분석해 소비자의  마음을 사로잡는 인사이트를 도출
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                            <div class="box-white">
+                                <p class="ta-c"><img src="img/common/icon_service_customer.png" alt=""></p>
+                                <h4 class="ta-c">소비자 행동분석기반<br>솔루션 제공<span></span></h4>
+                                <p class="des">
+                                    브랜드에 대해 소비자가 가진 인식상의 문제를 커뮤니케이션의 정교화를 통해 해결의 실마리를 찾고, 소비자의 인식 전환과 브랜드에 대한 우호적인 행동을 유도하는 솔루션을 제공
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                            <div class="box-white">
+                                <p class="ta-c"><img src="img/common/icon_service_data.png" alt=""></p>
+                                <h4 class="ta-c">차별적 빅데이터<br>수집 및 분석 역량<span></span></h4>
+                                <p class="des">
+                                    독자적인 디지털 소비자 패널과 소셜미디어 분석 시스템을 구축해 데이터를 수집/분석. 인구 통계 및 소비자 대표성을 고려한 패널을 대상으로 행동과 인식에 대한 통합시계열 데이터를 실시간으로 수집하고, 소비자 버즈데이터를 마케팅 이슈에 따라 분석
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    </div>
+    <!-- //e:Account -->
+    <!-- //e:careers -->
+    <section class="content-wrap careers">
+        <div class="container" id="contentsWrap">
+            <div class="row mt50 mb56">
+                <div class="col-md-offset-1 col-md-10">
+                    <h4>인간존중의 경영</h4>
+                    <span class="red-line"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-offset-1 col-md-11">
+                    <ul class="list-num">
+                        <li>
+                            <span>1</span>
+                            <dl>
+                                <dt>창의와 자율</dt>
+                                <dd>고정관념을 탈피해 새로운 생각과 시도를 추구한다</dd>
+                                <dd>자기 책임과 권한에 따라 주인의식을 가진다</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <span>2</span>
+                            <dl>
+                                <dt>인간중시</dt>
+                                <dd>개개인의 인격과 다양성을 존중</dd>
+                                <dd>고객가치 창출의 원천인 구성원을 중요한 자산으로 여긴다</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <span>3</span>
+                            <dl>
+                                <dt>능력개발 및 발휘 극대화</dt>
+                                <dd>스스로 세계 최고가 되겠다는 신념으로 일하고 능력을 개발</dd>
+                                <dd>개개인의 잠재력이 최대한 발휘될 수 있도록 기회를 제공</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <span>4</span>
+                            <dl>
+                                <dt>성과주의</dt>
+                                <dd>도전적인 목표를 세우고 지속적인 성과 창출에 노력한다</dd>
+                                <dd>능력과 장단기 성과에 따라 공정하게 평가하고 보상한다</dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- careers-hire -->
+        <div class="careers-hire">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-offset-1 col-md-10 ta-c">
+                        <h3>HS애드 인재채용</h3>
+                        <p class="ex mt24 hidden-br" data="768">채용은 외부에서 신규로 인력을 확보하는 제도로서 신입채용과 경력채용으로 구분되며 각기<br> 절차와 시기가 구분되어 있습니다. 또한 내부 인력의 Rotation을 통한 충원활동도 병행하고 있습니다.</p>
+                        <hr class="brown-line">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 center">
+                        <div class="hire-box">
+                            <dl>
+                                <dt>신입사원 채용</dt>
+                                <dd class="hidden-br" data="768">채용취지 : 미래인재 확보를 위해 학사 이상 학력소지자 대상의 공개채용 활동 <br><br>
+                                    채용시기 : 매년 1회 (상반기 또는 <br>하반기) 그룹채용과 병행 <br><br>
+                                    채용절차 : <br>서류전형 &gt; LG인적성검사 &gt; 1차면접 &gt; <br>합숙면접 &gt; 임원면접<br><br>
+                                    <a href="javascript:void(0)" target="_blank" title="새창">채용공고 확인 및 입사지원하기 &gt;&gt;</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>경력사원 채용</dt>
+                                <dd class="hidden-br" data="768">채용취지 : 신규인력의 증원 또는 퇴직 <br>등로 인한 결원 발생시 인력대체 (충원) <br><br>
+                                    채용시기 : 수시 채용 <br><br>
+                                    채용절차 : <br>서류전형 &gt; 1차 현업면접 &gt; 2차 임원면접<br><br>
+                                    <a href="javascript:void(0)" target="_blank" title="새창">채용공고 확인 및 입사지원하기 &gt;&gt;</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>내부 Rotation</dt>
+                                <dd class="hidden-br" data="768">채용취지 : 내부인재 경력개발 또는 채용 <br>불가시 내부 인재 활용을 통한 효율화 <br><br>
+                                    채용시기 : 4분기 이후 (또는 수시) <br><br>
+                                    채용절차 : <br>경력개발조사 후 인사팀 검토 후 <br>전사 인재개발위 후 확정
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- careers-hire -->
+    </section>
+    <!-- //e:careers -->
+    <!--CSR start-->
+    <section class="content-wrap" style="background:#adc1bb">
+        <div class="csr-adver">
+            <div class="container" id="contentsWrap">
+                <div class="row">
+                    <div class="col-md-offset-7 col-md-4 col-sm-offset-5 col-sm-6">
+                        <div class="card">
+                            <h3>HS 애드 대학생 <br>광고대상</h3>
+                            <hr class="card-line">
+                            <p>창의와 열정으로 미래를 준비하는 젊은 대학생들의 광고 아이디어 대향연. 1988년 제정한 이래 수 많은 광고인재를 양성하며 우리나라의 대표적인 대학생 광고 공모전으로 자리잡고 있습니다</p>
+                            <p><a href="javascript:void(0)" target="_blank" title="새창" class="btn-red">대학생 광고대상 사이트</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--CSR end-->
+    <!-- project xt start-->
+    <div class="content-wrap">
+        <section class="wrap back-gray service-xt">
+            <div class="bg02">
+                <div class="container">
+                    <div class="row bg-xt-mobile">
+                        <div class="col-md-4 col-md-offset-3 col-xs-12 ta-c">
+                            <div class="xt-mobile">
+                                <img src="img/service/img_slider.gif" alt="DAYCON앱화면 캡쳐 이미지" class="max">
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-xs-12">
+                            <!-- s:prize-info -->
+                            <div class="prize-info">
+                                <img src="img/service/img_logo_ny.png" alt="NEW YORK FESTIVAL">
+                                <p>UN DPI 부문<br>Grand Prix 수상</p>
+                            </div>
+                            <!-- //e:prize-info -->
+                            <h4>Daycon<span></span></h4>
+                            <p class="h4-des">소셜프레이밍을 위한 아이콘 창조</p>
+                            <ul class="list-type01">
+                                <li>NewYork Festival : UN DPI 1등상 / Finalist 4개 부문 <br> 부산국제 광고제 : Broze / Finalist <br>스파이크 아시아: Finalist</li>
+                                <li>LG스마트월드 내 정식 어플리케이션 등록</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- project xt end -->
+    <!-- retail end -->
+    <section class="content-wrap pb80 retail">
+        <div class="container">
+            <div class="row mt64">
+                <div class="col-md-3 col-sm-6">
+                    <h4>Retail Solution 1</h4>
+                    <span class="red-line"></span>
+                    <p>LG전자  베스트샵, LG생활건강 , 코오롱, <br>토니모리,  라비오뜨 , 신규 영업 파트 운영</p>
+                </div>
+                <div class="col-md-3 col-sm-6 mo-mt30">
+                    <h4>Retail Solution 2</h4>
+                    <span class="red-line"></span>
+                    <p>LG전자 HE, H&amp;A 사업부. LG유플러스 등 <br>유럽 , 중남미, 중아, 아시아, 인도, 중국, CIS <br>지역  등 총  글로벌 6,300 개 매장 Renovation 진행</p>
+                </div>
+                <div class="col-md-3 col-sm-6 mo-mt30">
+                    <h4>Retail Planning</h4>
+                    <span class="red-line"></span>
+                    <p>Global Retail Planning, 글로벌 핵심유통 매장 <br>컨설팅 (쇼퍼/프로모터/진열) 및 디스플레이 <br>전략 솔루션 개발<br>공간 스토리 텔링, Store Lab (소비자 행동 조사  디지털 시스템) , 쇼퍼 리서치  등</p>
+                </div>
+                <div class="col-md-3 col-sm-6 mo-mt30">
+                    <h4>Space Design</h4>
+                    <span class="red-line"></span>
+                    <p>마곡 사이언스파크 인테리어  디렉팅 , 풀무원 <br>네추럴 소울키친, 고양 터미널 푸드클러스터 등</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- retail end -->
+    <!-- promotion start -->
+    <section class="content-wrap">
+        <div class="wrap service-promotion">
+            <div class="back-gray">
+                <div class="container" id="contentsWrap">
+                   <div class="row">
+                       <div class="col-sm-8 col-sm-push-2">
+                           <p class="service-intro hidden-br" data="786">
+                               “사람들은 매일 보는 것에는 흥미를 잃는다 하지만  음악과 그림을 입히고,<br>
+                               전시하는  기법을  바꾼다면 상황은 달라진다”<br>
+                               HS애드는 고객이 브랜드와 직접적으로 만나는  최적의 프로모션을 설계합니다. 전략적으로 긍정적인 체험을 유도하며 친밀감을 높입니다.
+                           </p>
+                       </div>
+                   </div>
+                   <div class="row pb80">
+                       <div class="service-promotion-box">
+                           <p class="promotion-tit">Exhibition<span></span></p>
+                           <p>세계 4대 IT 쇼를 중심으로, 국내외 대형전시를 최고의 전문가들이 모여 최적으로 솔루션으로 가장 효과적인 전시 커뮤니케이션 공간을 구현합니다.</p>
+                       </div>
+                       <div class="service-promotion-box">
+                           <p class="promotion-tit">OOH<span></span></p>
+                           <p>생활 밀착형 매체에서 랜드마크형 매체까지, 급변하는 OOH 미디어의 트렌드를 분석/ 제안하고, 최적의 광고 효과를 달성할 수 있는 매체 집행을 수행합니다.</p>
+                       </div>
+                       <div class="service-promotion-box">
+                           <p class="promotion-tit">Event &amp; Campaign<span></span></p>
+                           <p>국내에서 해외까지, 마케팅 전략 수립에서 실행까지, 기업의 제품과 서비스의 가치를 높일 수 있는 최적의 IMC 캠페인을 전개합니다.</p>
+                       </div>
+                       <div class="service-promotion-box">
+                           <p class="promotion-tit">Visual Contents<span></span></p>
+                           <p>전시, 홍보, 행사, 글로벌 DS 영상 등 기업과 브랜드의 가치를 제고시키는 한 차원 높은 콘텐츠를 수립합니다.</p>
+                       </div>
+                       <div class="service-promotion-box">
+                           <p class="promotion-tit">BTL Marketing<span></span></p>
+                           <p>대규모 국가 행사에서 VIP 정상회의에 이르기까지의 정부/ 지방자치단체의 프로젝트 뿐만 아니라, 세계 박람회와 국내 엑스포의  기획·제작·운영 ·홍보까지 총괄 진행 가능한 최고의 노하우와 솔루션을 보유하고 있습니다.</p>
+                       </div>
+                       <div class="service-promotion-box">
+                           <p class="promotion-tit">SI/CI<span></span></p>
+                           <p>소비자의 최 접점에 있는 영업장의 외관 및 내부 인테리어, 사인, POP, 홍보 인쇄물 등은 물론, CI/BI, 고객 홍보 공간인 상설 전시장/홍보관까지 디자인부터 실행 업무를 전담/지원 합니다.</p>
+                       </div>
+                       <div class="service-promotion-box">
+                           <p class="promotion-tit">PR<span></span></p>
+                           <p>전략적 PR 기획 및 컨설팅/ On line PR/CSR/출판 등 다양한 커뮤니케이션 툴의 조화와 전략적 활용으로 효과 높은 PR 활동을 제안/실행 합니다.</p>
+                       </div>
+                   </div>
+               </div>
+            </div>
+        </div>
+    </section>
+    <!-- promotion end -->
+    <!-- media start -->
+    <section class="content-wrap">
+        <!-- s:back-gray  -->
+        <div class="back-gray media-wrap1">
+            <div class="container" id="contentsWrap">
+                <div class="row mb50">
+                    <div class="col-md-12 ta-c">
+                        <div class="line-box">
+                            <h4>M.Scanner</h4>
+                            <p class="hidden-br" data="768">Target의 미디어 이용행태 및 광고 주목도, 라이프 스타일을 <br>종합적으로 분석하여 Media Mix 가이드라인 제시</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="red-box type01">
+                            <dl>
+                                <dt>Media<span>SCANNER</span></dt>
+                                <dd>타겟의 미디어 이용행태를 분석, 광고 예산을 <br>효율적으로 배분하기 위한 가이드라인을 제시합니다</dd>
+                            </dl>
+                            <div>
+                                <p><span>1.</span>미디어 접촉률/접촉빈도</p>
+                                <p><span>2.</span>미디어 광고주목도</p>
+                                <p><span>3.</span>미디어별 4단계 광고효과</p>
+                                <p><span>4.</span>타켓의 입소문 영향력</p>
+                                <p><span>5.</span>마케팅 목적 / Creative를 감안한 미디어 예산 배분</p>
+                            </div>
+                        </div>
+                        <div class="red-box type01">
+                            <dl>
+                                <dt>Market<span>SCANNER</span></dt>
+                                <dd>특정 제품군 이용자의 특성을 간단한 조작을 통해 <br>분석하여 결과리포트를 산출합니다</dd>
+                            </dl>
+                            <div>
+                                <p><span>1.</span>제품 이용 행태 - 이용률, 구매율, TOM 등</p>
+                                <p><span>2.</span>미디어 이용 성향 - 신규 미디어 이용 행태 등</p>
+                                <p><span>3.</span>라이프스타일 - 여가 활동 및 라이프스타일 성향</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- media end -->
+    <!-- awards start -->
+    <section class="content-wrap mb80">
+        <div class="container awards" id="contentsWrap">
+            <div class="award-list">
+                <div class="row pt60">
+                    <div class="col-md-offset-1 col-md-2">
+                        <h4 class="hidden-br" date="768">2016년<br>대상</h4>
+                        <span class="red-line"></span>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="img/company/img_awards14.jpg" alt="LG전자 '다시 만난 우리 문화유산전' 사진" class="max">
+                        <p class="mt16 hidden-br" data="768">LG전자 <br>'다시 만난 우리 문화유산전'<br>[프로모션 부문] </p>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="img/company/img_awards15.jpg" alt="대한항공 '대학생 디자인 공모전' 사진" class="max">
+                        <p class="mt16 hidden-br" data="768">대한항공 <br>'대학생 디자인 공모전'<br>[인쇄광고부문] </p>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="img/company/img_awards16.jpg" alt="대한항공 '게스트하우스' 광고 이미지" class="max">
+                        <p class="mt16 hidden-br" data="768">대한항공 <br> '게스트하우스'<br>[통합 미디어 광고캠페인 부문]</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- awards end -->
+    <!-- contact us start -->
+    <section class="content-wrap mt48 mb80">
+        <div class="container" id="contentsWrap">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="contact-tab">
+                        <h3 class="active"><a href="javascript:void(0)">일반 문의</a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 mt40">
+                    <form class="" action="" method="post">
+                        <table class="type01">
+                            <caption>일반 문의 (성명, 이메일, 글제목)</caption>
+                            <colgroup>
+                                <col width="30%">
+                                <col width="70%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><label for="name">성명</label></th>
+                                    <td>
+                                        <input type="text" id="name" name="name" value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><label for="email">이메일</label></th>
+                                    <td>
+                                        <input type="text" id="email" name="email" value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><label for="title">글제목</label></th>
+                                    <td>
+                                        <input type="text" id="title" name="title" value="">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+                <div class="col-md-7 mt40">
+                    <label for="contents" class="blind">문의 내용</label>
+                    <textarea class="textarea-type01 mb24" name="contents" id="contents" placeholder="문의 내용" title="문의 내용"></textarea>
+                    <p class="ta-r mt12"><a href="javascript:void(0);" onclick="check_frm()" class="btn-gray">SEND</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- contact us end -->
+     <!-- s:footer start -->
+    <footer id='footer'>
+        <div class="container">
+            <p>Copyright ⓒ HS Ad China Co., Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+     <!-- s:footer end -->
+</div><!-- END wrap-->
+</body>
+
+
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>왕홍 마케팅</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0 user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/respond-image.js" type="text/javascript"></script>
+    <!--[if lt IE 9]>
+    <script src="js/respond.js"></script>
+    <script src="js/html5.js"></script>
+    <script src="js/svg-change.js"></script>
+    <script src="js/jquery.backgroundSize.js" type="text/javascript"></script>
+    <![endif]-->
+<body>
+<div class="wrap">
+
+    <header class="sub">
+        <div id="logo-box">
+            <h1><a href="index.html" title="메인으로 이동"><img src="img/common/hsad_logo.png" alt="HS Ad" class="hsad-logo"></a></h1>
+        </div>
+        <div class="menu">
+            <a href="javascript:void(0)" class="bt-menu ti-hidden" title="열림">
+                메뉴
+                <span></span>
+                <span></span>
+                <span class="last"></span>
+            </a>
+        </div>
+        <div class="lang-choice">
+            <a href="http://www.hsadchina.com/home/kr/" class="active">KOR</a><span></span><a href="http://www.hsadchina.com/home/">CHN</a>
+        </div>
+        <div class="nav-util-mo">
+             <a href="javascript:void(0)" class="nav-a-1">제안서</a>
+            <a href="contactus.html" class="contact">견적문의</a>
+        </div>
+    </header>
+
+    <nav id="gnb" tabindex="0">
+        <div class="container">
+            <div class="row nav-wrapper">
+                <ul>
+                    <li class="nav-block">
+                        <p class="first-depth">Introduction</p>
+                        <ul class="first-block">
+                            <li class="twice-depth"><a href="index.html">Overview</a></li>
+                            <li class="twice-depth"><a href="history.html">HS Ad China History</a></li>
+                            <li class="twice-depth"><a href="vision.html">Vision</a></li>
+                            <li class="twice-depth"><a href="portfolio.html">Portfolio</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-block">
+                        <p class="first-depth">Baidu Service</p>
+                        <ul class="second-block">
+                            <li class="twice-depth"><a href="baidu_service.html">Baidu 광고 서비스</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-block">
+                        <p class="first-depth">SNS Service</p>
+                        <ul class="second-block">
+                            <li class="twice-depth"><a href="sns_service.html">HS Ad 플랫폼 소개</a></li>
+                            <li class="twice-depth"><a href="sns_service.html#sns_service_02" onclick="navCon();$('.bt-menu').removeClass('open').attr('title','열림');"> - CONTENTS</a></li>
+                            <li class="twice-depth"><a href="sns_service.html#sns_service_03" onclick="navCon();$('.bt-menu').removeClass('open').attr('title','열림');"> - EVENT</a></li>
+                            <li class="twice-depth"><a href="sns_service.html#sns_service_04" onclick="navCon();$('.bt-menu').removeClass('open').attr('title','열림');"> - 위챗 홈페이지</a></li>
+                            <li class="twice-depth"><a href="sns_service.html#sns_service_05" onclick="navCon();$('.bt-menu').removeClass('open').attr('title','열림');"> - 위챗 쇼핑몰 구축</a></li>
+                            <li class="twice-depth"><a href="sns_service.html#sns_service_06" onclick="navCon();$('.bt-menu').removeClass('open').attr('title','열림');"> - 모바일 BBS</a></li>
+                            <li class="twice-depth"><a href="sns_service.html#sns_service_07" onclick="navCon();$('.bt-menu').removeClass('open').attr('title','열림');"> - 모바일 쿠폰</a></li>
+                            <li class="twice-depth"><a href="viral.html">Viral 마케팅</a></li>
+                            <li class="twice-depth"><a href="wanghong.html">왕홍 마케팅</a></li>
+                            <li class="twice-depth"><a href="sns_service_policy.html">SNS 운영 서비스 정책</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-block">
+                        <p class="first-depth">Media Service</p>
+                        <ul class="second-block">
+                            <li class="twice-depth"><a href="media_service.html">웨이보 Ad</a></li>
+                            <li class="twice-depth"><a href="media_service.html#media_service_02" onclick="navCon();$('.bt-menu').removeClass('open').attr('title','열림');">Wechat Ad</a></li>
+                            <li class="twice-depth"><a href="media_service.html#media_service_03" onclick="navCon();$('.bt-menu').removeClass('open').attr('title','열림');">DSP Ad</a></li>
+                            <li class="twice-depth"><a href="media_service.html#media_service_04" onclick="navCon();$('.bt-menu').removeClass('open').attr('title','열림');">PR</a></li>
+                            <li class="twice-depth"><a href="media_service_policy.html">Media Service 정책</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-block">
+                        <p class="first-depth">Contact Us</p>
+                        <ul class="second-block">
+                            <li class="twice-depth"><a href="contactus.html">Contact Us</a></li>
+                            <li class="twice-depth"><a href="contactus.html">견적문의</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- s:nav-util 侧边 -->
+    <div id="nav-util">
+        <span class="nav-a-1"><img src="img/contact-icon.png" alt=""></span>
+        <a href="contactus.html" class="contact">연락처 및 견적문의</a>
+    </div>
+    <!-- s:nav-util 侧边 -->
+     <!-- s:btn-page-up 右底部 -->
+    <a class="btn-page-up" href="#">
+        <img src="img/common/icon_page_up.svg" id="icon-page-up" class="icon-page-up" alt="top">
+        <span></span>
+    </a>
+    <!-- s:btn-page-up 右底部 -->
+    <!-- s:page copy -->
+    <div class="page-copy line">
+        <div class="page-title-wrap">
+            <a href="javascript:history.back();" class="history-back">
+                <img src="img/common/icon_page_back.svg" class="icon roll" alt="뒤로">
+            </a>
+            <h2>왕홍 마케팅</h2>
+        </div>
+        <span></span>
+    </div>
+    <!-- //e:page copy -->
+
+        <div class="container servicePolicy">
+             <h1 class="mt50">중국 현지 대형 왕홍 관리 네트워크 및 매체사와 협업, 브랜딩 활동 기획<br>왕홍 관련 BTL , Digital 콘텐츠 제작 및 운영 자체 진행</h1>
+        </div>
+
+    <!-- project xt start-->
+    <div class="content-wrap">
+	<div class="row title-wrap mt50">
+		<center>
+		<div class="col-lg-12 main">
+			<h1>왕홍 마케팅 예시</h1>
+		</div>
+		</center>
+	</div>
+        <section class="wrap back-gray service-xt">
+            <div class="bg02">
+                <div class="container">
+                    <div class="row bg-xt-mobile" style="background: url(img/portfolio/35-2.png) no-repeat 12%;">
+                        <div class="col-md-4 col-md-offset-3 col-xs-12 ta-c">
+                            <div class="xt-mobile">
+                                <img src="img/portfolio/35.gif" class="max">
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-xs-12">
+                            <!-- s:prize-info -->
+                            <div class="prize-info">
+                                <p>대한항공 & 마펑우<br>왕홍 Co-Promotion 마케팅</p>
+                            </div>
+                            <!-- //e:prize-info -->
+                            <h4>《LET’S GO LUCKY GIRLS!》<span></span></h4>
+                            <p class="h4-des">대한항공과 함께 꿈의 여행을</p>
+                            <ul class="list-type01">
+                                <li>기간 : 2016년 5월, 1달 간</li>
+                                <li>기획 : 마펑우, 대한항공과 Co-Promotion 하여 3명의 왕홍 섭외, 대한항공이 소개하는 한국 여행코스 체험</li>
+                                <li>제작 :  프로모션 Arrangement, 관련 콘텐츠 제작  웨이보 웨이신 활용</li>
+                                <li>목적 : 대한항공 주요 타겟 20~30 대 여성 FIT 고객에게 브랜드 이미지 제고</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- project xt end -->
+	
+    <!-- project xt start-->
+    <div class="back-gray content-wrap">
+        <section class="wrap service-xt">
+            <div class="bg02" style="background:url('');">
+                <div class="container" style="color:#3c3c3c;">
+                    <div class="row bg-xt-mobile" style="background: url(img/portfolio/36.gif) no-repeat 12%;">
+                        <div class="col-md-4 col-md-offset-3 col-xs-12 ta-c">
+                            <div class="xt-mobile">
+                                <img src="img/portfolio/36-2.gif" class="max">
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-xs-12">
+                            <!-- s:prize-info -->
+                            <div class="prize-info" style="border-bottom: 1px solid #3c3c3c;">
+                                <p style="color:#3c3c3c;">백산수 & 장위안, 왕홍 徐小组<br>Co-Promotion 마케팅</p>
+                            </div>
+                            <!-- //e:prize-info -->
+                            <h4>《1달간의 변화 체험단 이벤트》<span></span></h4>
+                            <p class="h4-des" style="color:#3c3c3c;">백산수 위챗 서비스 계정</p>
+                            <ul class="list-type02">
+                                <li>기간 : 2015년 6월, 2달 간</li>
+                                <li>
+                                        기획<br>
+			① 장위안과 왕홍, 1달간 일상생활에서 백산수와 함께하는 모습 포스팅<br>
+			② 동시에 중국 일반 소비자 대상, 체험단을 모집하여 백산수 제공 후, 후기 포스팅 모집<br>
+			③ 포스팅 내용 BBS 형태로 관리하여 추가 콘텐츠로 활용</li>
+                                <li>제작 :  장위안 영상, 장위안 & 왕홍 백산수 사진 , 웨이신 이벤트 홈페이지 , BBS</li>
+                                <li>목적 : 중국 소비자와 백산수의 건강한 이미지 Communication</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- project xt end -->
+
+
+     <!-- s:footer start -->
+    <footer id='footer'>
+        <div class="container">
+            <p>Copyright ⓒ HS Ad China Co., Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+     <!-- s:footer end -->
+
+</div><!-- END wrap-->
+</body>
+
+
+</html>

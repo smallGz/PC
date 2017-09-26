@@ -1,0 +1,603 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>HS애드차이나</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0 user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/respond-image.js" type="text/javascript"></script>
+    <!--[if lt IE 9]>
+    <script src="js/respond.js"></script>
+    <script src="js/html5.js"></script>
+    <script src="js/svg-change.js"></script>
+    <script src="js/jquery.backgroundSize.js" type="text/javascript"></script>
+    <![endif]-->
+<body>
+<div class="wrap main">
+
+    <header>
+        <div id="logo-box">
+            <h1><a href="index.html" title="메인으로 이동"><img src="img/common/hsad_logo.png" alt="HS Ad" class="hsad-logo"></a></h1>
+        </div>
+        <div class="menu">
+            <a href="javascript:void(0)" class="bt-menu ti-hidden" title="열림">
+                메뉴
+                <span></span>
+                <span></span>
+                <span class="last"></span>
+            </a>
+        </div>
+        <div class="lang-choice">
+            <a href="http://www.hsadchina.com/home/kr/" class="active">KOR</a><span></span><a href="http://www.hsadchina.com/home/">CHN</a>
+        </div>
+        <div class="nav-util-mo">
+            <a href="javascript:void(0)" class="nav-a-1">제안서</a>
+            <a href="contactus.html" class="contact">견적문의</a>
+        </div>
+    </header>
+
+
+    <nav id="gnb" tabindex="0">
+        <div class="container">
+            <div class="row nav-wrapper">
+                <ul>
+                    <li class="nav-block">
+                        <p class="first-depth">Introduction</p>
+                        <ul class="first-block">
+                            <li class="twice-depth"><a href="index.html">Overview</a></li>
+                            <li class="twice-depth"><a href="history.html">HS Ad China History</a></li>
+                            <li class="twice-depth"><a href="vision.html">Vision</a></li>
+                            <li class="twice-depth"><a href="portfolio.html">Portfolio</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-block">
+                        <p class="first-depth">Baidu Service</p>
+                        <ul class="second-block">
+                            <li class="twice-depth"><a href="baidu_service.html">Baidu 광고 서비스</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-block">
+                        <p class="first-depth">SNS Service</p>
+                        <ul class="second-block">
+                            <li class="twice-depth"><a href="sns_service.html">HS Ad 플랫폼 소개</a></li>
+                            <li class="twice-depth"><a href="sns_service.html#sns_service_02" onclick="navCon();$('.bt-menu').removeClass('open').attr('title','열림');"> - CONTENTS</a></li>
+                            <li class="twice-depth"><a href="sns_service.html#sns_service_03" onclick="navCon();$('.bt-menu').removeClass('open').attr('title','열림');"> - EVENT</a></li>
+                            <li class="twice-depth"><a href="sns_service.html#sns_service_04" onclick="navCon();$('.bt-menu').removeClass('open').attr('title','열림');"> - 위챗 홈페이지</a></li>
+                            <li class="twice-depth"><a href="sns_service.html#sns_service_05" onclick="navCon();$('.bt-menu').removeClass('open').attr('title','열림');"> - 위챗 쇼핑몰 구축</a></li>
+                            <li class="twice-depth"><a href="sns_service.html#sns_service_06" onclick="navCon();$('.bt-menu').removeClass('open').attr('title','열림');"> - 모바일 BBS</a></li>
+                            <li class="twice-depth"><a href="sns_service.html#sns_service_07" onclick="navCon();$('.bt-menu').removeClass('open').attr('title','열림');"> - 모바일 쿠폰</a></li>
+                            <li class="twice-depth"><a href="viral.html">Viral 마케팅</a></li>
+                            <li class="twice-depth"><a href="wanghong.html">왕홍 마케팅</a></li>
+                            <li class="twice-depth"><a href="sns_service_policy.html">SNS 운영 서비스 정책</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-block">
+                        <p class="first-depth">Media Service</p>
+                        <ul class="second-block">
+                            <li class="twice-depth"><a href="media_service.html">웨이보 Ad</a></li>
+                            <li class="twice-depth"><a href="media_service.html#media_service_02" onclick="navCon();$('.bt-menu').removeClass('open').attr('title','열림');">Wechat Ad</a></li>
+                            <li class="twice-depth"><a href="media_service.html#media_service_03" onclick="navCon();$('.bt-menu').removeClass('open').attr('title','열림');">DSP Ad</a></li>
+                            <li class="twice-depth"><a href="media_service.html#media_service_04" onclick="navCon();$('.bt-menu').removeClass('open').attr('title','열림');">PR</a></li>
+                            <li class="twice-depth"><a href="media_service_policy.html">Media Service 정책</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-block">
+                        <p class="first-depth">Contact Us</p>
+                        <ul class="second-block">
+                            <li class="twice-depth"><a href="contactus.html">Contact Us</a></li>
+                            <li class="twice-depth"><a href="contactus.html">견적문의</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- s:nav-util 侧边 -->
+    <div id="nav-util">
+        <span class="nav-a-1"><img src="img/contact-icon.png" alt=""></span>
+        <a href="contactus.html" class="contact">연락처 및 견적문의</a>
+    </div>
+    <!-- s:nav-util 侧边 -->
+     <!-- s:btn-page-up 右底部 -->
+    <a class="btn-page-up" href="#">
+        <img src="img/common/icon_page_up.svg" id="icon-page-up" class="icon-page-up" alt="top">
+        <span></span>
+    </a>
+    <!-- s:btn-page-up 右底部 -->
+    <!-- s:home-box  start -->
+<!--     <div id="home-box">
+        <div class="home-linart-wrap">
+            <div class="video-wrap">
+                <video loop autoplay style="width:100%; height:100%;">
+                   <source src="video/hs_typo.mp4" type="video/mp4" poster="img/main/bg_visual.jpg"/>
+                </video>
+            </div>
+        </div>
+        <span class="main-line"></span>
+    </div>
+    <div class="main-copy1">
+        <img src="img/main/letter.png" data-src-base="img/main/" data-src="<767:letter_mo.png, >767:letter.png" alt="HYBRID SOLUTION" class="max">
+    </div> -->
+     <!-- s:home-box  end -->
+    <section id="home-box" class='pt100'>
+    <!-- IDENTITY  start-->
+        <div id="content-block1" class="container">
+            <div class="row title-wrap">
+                <div class="col-lg-12" id="mapTxt">
+                   <!--  <h1>IDENTITY</h1> -->
+                    <img src="img/portfolio/43.jpg" class="max">
+                    <img src="img/portfolio/txt-43_03.png" alt="" class="img-txt-43">
+                    <p>
+                        HS 애드 차이나는 중국 현지 미디어 인사이트를 토대로<br>
+                        남다른 크리에이티브와 최적의 디지털 마케팅 전략을 수립하여<br>
+                        안정적인 중국 시장 진출의 솔루션을 제시합니다. <br><br><br>
+                        “HS 애드는 LG 그룹의 자회사 입니다” 
+                    </p>
+                   <br><br>
+                </div>
+            </div>
+        </div>
+        <!-- SERVICES  end-->
+    </section>
+    <div class="content-wrap pt60 pb60" id="clients">
+        <div class="container">
+             <h1>CLIENTS</h1>
+             <ul>
+                 <li><img src="img/portfolio/clients-1.jpg" alt=""></li>
+                 <li><img src="img/portfolio/clients-2.jpg" alt=""></li>
+                 <li><img src="img/portfolio/clients-3.jpg" alt=""></li>
+                 <li><img src="img/portfolio/clients-4.jpg" alt=""></li>
+                 <li><img src="img/portfolio/clients-5.jpg" alt=""></li>
+                 <li><img src="img/portfolio/clients-6.jpg" alt=""></li>
+                 <li><img src="img/portfolio/clients-7.jpg" alt=""></li>
+
+                 <li><img src="img/portfolio/clients-8.jpg" alt=""></li>
+                 <li><img src="img/portfolio/clients-9.jpg" alt=""></li>
+                 <li><img src="img/portfolio/clients-10.jpg" alt=""></li>
+                 <li><img src="img/portfolio/clients-11.jpg" alt=""></li>
+                 <li><img src="img/portfolio/clients-12.jpg" alt=""></li>
+                 <li><img src="img/portfolio/clients-13.jpg" alt=""></li>
+                 <li><img src="img/portfolio/clients-14.jpg" alt=""></li>
+
+                 <li><img src="img/portfolio/clients-15.jpg" alt=""></li>
+                 <li><img src="img/portfolio/clients-16.jpg" alt=""></li>
+                 <li><img src="img/portfolio/clients-17.jpg" alt=""></li>
+                 <li><img src="img/portfolio/clients-18.jpg" alt=""></li>
+                 <li><img src="img/portfolio/clients-19.jpg" alt=""></li>
+                 <li><img src="img/portfolio/clients-20.jpg" alt=""></li>
+                 <li><img src="img/portfolio/clients-21.jpg" alt=""></li>
+             </ul>
+        </div>
+    </div>
+    <!-- //e:Account -->
+    <div class="content-wrap" id="hsad_visioin">
+        <section class="wrap back-gray service-account">
+                <div class="container" id="contentsWrap">
+                	<div style="height:4.375rem;">&nbsp;</div>
+                                                            <p class="hidden-br desc" data="768" style="font-size: 2rem; text-align:center;">중국 현지 미디어 인사이트를 토대로<BR>남다른 크리에이티브와 <BR>최적의 디지털 마케팅 전략을 수립하여 <BR>안정적인 중국 시장 진출의 솔루션을 제시합니다.</p>
+                	<div class="row box-white-wrap" id="box-bg">
+                	   <div class="col-md-4 col-sm-12">
+                	        <div class="box-white" id="box-bg-1">
+                		<!--<p class="ta-c"><img src="img/common/icon_service_data.png" alt=""></p>-->
+                		<h4 class="ta-c">중국 현지<br>시장 조사 및 분석<span></span></h4>
+                		<p class="des">중국 현지 시장분석을 바탕으로 소비자 및 미디어 인사이트 간파</p>
+                	        </div>
+                	</div>
+                	<div class="col-md-4 col-sm-12">
+                	   <div class="box-white" id="box-bg-2">
+                		   <!--<p class="ta-c"><img src="img/portfolio/52.png" alt=""></p>-->
+                		   <h4 class="ta-c">Concept 및<br>Key Message 개발<span></span></h4>
+                		   <p class="des">인사이트를 바탕으로 중국 소비자의 마음을 움직일 수 있는 브랜드 가치 Concept 및 Key Message 수립</p>
+                	   </div>
+                	</div>
+                	<div class="col-md-4 col-sm-12">
+                	   <div class="box-white" id="box-bg-3">
+                    				   <!--<p class="ta-c"><img src="img/common/icon_service_data.png" alt=""></p>-->
+                    				   <h4 class="ta-c">Creative 및 Digital<br>Contents 개발<span></span></h4>
+                    				   <p class="des">중국 잡지사 출신 에디터 및 디지털 Creative 인력 보유<br>중국 디지털 플랫폼 최적의 Creative 및 Contents 개발 </p>
+                	   </div>
+                	</div>
+                	<div class="col-md-4 col-sm-12">
+                	    <div class="box-white" id="box-bg-4">
+                		<!--<p class="ta-c"><img src="img/common/icon_service_data.png" alt=""></p>-->
+                		<h4 class="ta-c">Digital Media<br>전략 수립<span></span></h4>
+                		<p class="des">최적의 효율을 위한 Media Mix 전략 수립 </p>
+                	    </div>
+                	</div>
+                	<div class="col-md-4 col-sm-12">
+                	    <div class="box-white" id="box-bg-5">
+                		<!--<p class="ta-c"><img src="img/common/icon_service_data.png" alt=""></p>-->
+                		<h4 class="ta-c" style="line-height: 2.6;">캠페인 집행<span></span></h4>
+                		<p class="des">집행 착수부터 결과보고까지 전 과정을 한/중 현지에서  직접, 상시 커뮤니케이션</p>
+                	    </div>
+                	</div>
+                	<div class="col-md-4 col-sm-12">
+                	    <div class="box-white" id="box-bg-6">
+                		<!--<p class="ta-c"><img src="img/common/icon_service_data.png" alt=""></p>-->
+                		<h4 class="ta-c">결과 및<br>인사이트 제공<span></span></h4>
+                		<p class="des">수치 나열의 보고를 넘어 결과에 대한 인사이트 도출하여 제공 </p>
+                	    </div>
+                	</div>
+
+
+                </div>
+                </section>
+    </div>
+    <!-- //e:Account -->
+
+
+
+    <section id="content-wrap">
+    <!-- IDENTITY  start-->
+        <div id="content-block1" class="container" style="min-height: 300px;">
+             <h1>SERVICE</h1>
+            <p class="hidden-br desc hidden-mo" data="768">BIG IDEA FOR IMPROVING <br>YOUR BRAND VALUE</p>
+            <div class="row mb60">
+
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <a href="javascript:void(0)" class="service-list list3">
+                        <div>
+                            <span></span>
+                            <div class="text">
+                                <p class="big">Baidu 광고</p>
+                                <p class="small hidden-br hidden-mo" data="1200">바이두 한국 영업 1급 대리상 자격으로, SEM 을 비롯한 모든 바이두 광고를 최적의 효율로 집행해드립니다.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <a href="javascript:void(0)" class="service-list list6">
+                        <div>
+                            <span></span>
+                            <div class="text">
+                                <p class="big">위챗</p>
+                                <p class="small hidden-br hidden-mo" data="1200">중국 최고 점유율 플랫폼 위챗에서전문 컨텐츠 제작팀과 개발팀이최고의 서비스를 약속드립니다.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <a href="javascript:void(0)" class="service-list list5">
+                        <div>
+                            <span></span>
+                            <div class="text">
+                                <p class="big">웨이보</p>
+                                <p class="small hidden-br hidden-mo" data="1200">중국 최대 개방형 SNS 에서중국 현지 이슈를 실시간으로 반영한 기획을 통해 가장 효과적인 컨텐츠를 작성합니다.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <a href="javascript:void(0)" class="service-list list2">
+                        <div>
+                            <span></span>
+                            <div class="text">
+                                <p class="big">SNS & Viral</p>
+                                <p class="small hidden-br hidden-mo" data="1200">브랜드를 생활 속에서 가장 드라마틱하게 만나는 순간을 만듭니다</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <a href="javascript:void(0)" class="service-list list7">
+                        <div>
+                            <span></span>
+                            <div class="text">
+                                <p class="big">DSP</p>
+                                <p class="small hidden-br hidden-mo" data="1200">중국 메이저 DSP사들과 직접 협업하여,  적확한 타겟팅과 최적의 효율로 집행합니다.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <a href="javascript:void(0)" class="service-list list8">
+                        <div>
+                            <span></span>
+                            <div class="text">
+                                <p class="big">PR</p>
+                                <p class="small hidden-br hidden-mo" data="1200">기자 출신 컨텐츠 팀이 직접 PR 내용을 검수, 집행하며 위기 관리까지 철저히 신경씁니다.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <a href="javascript:void(0)" class="service-list list4">
+                        <div>
+                            <span></span>
+                            <div class="text">
+                                <p class="big">왕홍 마케팅</p>
+                                <p class="small hidden-br hidden-mo" data="1200">중국 현지 대형 왕홍관리 네트워크 및 매체사와 협업하여 브랜딩 활동을 기획합니다</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <a href="javascript:void(0)" class="service-list list1">
+                        <div>
+                            <span></span>
+                            <div class="text">
+                                <p class="big">PLATFORM</p>
+                                <p class="small hidden-br hidden-mo" data="1200">HS Ad 차이나만의 플랫폼으로 최적의 인터렉티브 마케팅 솔루션을 전개합니다</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <!-- SERVICES  end-->
+    </section>
+    <!-- //e:careers -->
+    <section class="content-wrap careers">
+        <!-- careers-hire -->
+        <div class="careers-hire">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-offset-1 col-md-10 ta-c">
+                        <h3>바이두 1급 공식 파트너</h3>
+                        <p class="ex mt24 hidden-br" data="768">한국 바이두 공식 대행사 4곳 중 타 대행사 대비 높은 인센티브를 지급하여 가격 경쟁력이 있으며<br>전문 인력 지원을 통해 효율적인 운영과 인사이트 있는 리포트를 제공합니다.</p>
+
+		<div class="col-md-12 center" style="">
+			<div class="hire-box">
+				<dl style="max-width: 446px;">
+					<a href="contactus.html" target="_blank"><dt style="border: 1px solid #5e5756; background: url(../img/company/bg_careers02.png);padding: .8rem 7.875rem;margin-top: 2rem;">DETAIL</dt></a>
+				</dl>
+			</div>
+		</div>
+
+                        <hr class="brown-line" style="margin-top: 8rem;">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 center">
+                        <div class="hire-box">
+                            <dl>
+                                <dt>가격 경쟁력</dt>
+                                <dd class="hidden-br" data="768" style="min-height: 230px;">
+			운영 대행 수수료 저렴<br><br>
+			타 대행사 대비 높은 인센티브 지급<br><br>
+			한/중 현지 직접 운영
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>전문 인력 지원</dt>
+                                <dd class="hidden-br" data="768" style="min-height: 230px;">
+			매월 Baidu 정책 변동 리포트 제공<br><br>
+			Baidu Certified Specialist 직접 운영 <br><br>
+			전담 AE 배정
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>협력 확대</dt>
+                                <dd class="hidden-br" data="768" style="min-height: 230px;">
+			한/중 Direct 커뮤니케이션<br><br>
+			바이두 Big Data 활용 협력안 제공<br><br>
+			바이두 플랫폼 신 광고상품 개발
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- careers-hire -->
+    </section>
+    <!-- //e:careers -->
+    <!-- //e:Account -->
+    <div class="content-wrap" id="hsad_visioin">
+        <section class="wrap back-gray service-account">
+	<div class="container" id="contentsWrap">
+                 <div class="row">
+            	       <div class="col-md-8 col-md-push-2">
+            		<div class="row title-wrap">
+		  <div class="col-lg-12"  style="margin-top: 3.75rem;">
+                    		<center><h1>STRENGTH</h1>
+                    		<p class="hidden-br desc hidden-mo" data="768">DIRECT, FIELD, IMMEDIATELY<br>직접 현장에서 즉시 지원 합니다</p>
+                    		</center>
+		  </div>
+            		</div>
+            	      </div>
+                 </div>
+	<div class="row box-white-wrap">
+	   <div class="col-md-6 col-sm-12">
+	       <div class="box-white">
+		<p class="ta-c"><img src="img/portfolio/51.png" alt=""></p>
+		<h4 class="ta-c">광고 1급 대리상 자격 획득<span></span></h4>
+		<p class="des">
+			《Baidu 한국영업 1급 대리상 》 획득 (2016년)<br>
+			Tencent 《DMP 사업》 협력사<br>
+			iQiyi 협력사<br>
+			중국 대표 多數 미디어 Rep 社 파트너 등록
+		</p>
+	     </div>
+	</div>
+	<div class="col-md-6 col-sm-12">
+	   <div class="box-white">
+	       <p class="ta-c"><img src="img/portfolio/52.png" alt=""></p>
+	       <h4 class="ta-c">중국 FIT (미디어) 인사이트 풍부<span></span></h4>
+	       <p class="des">
+		多數 관련 기업체 현재 서비스 중<br>
+		〈 대한항공, 신세계면세점, 한국관광공사, 진에어, 인천국제공항공사, 한식문화재단, 11번가 等〉
+	       </p>
+	   </div>
+	</div>
+	<div class="col-md-6 col-sm-12">
+	   <div class="box-white">
+	       <p class="ta-c"><img src="img/portfolio/53.png" alt=""></p>
+	       <h4 class="ta-c">《한국영업사무소》 설립<span></span></h4>
+	       <p class="des">
+	           중국 미디어 경험을 갖춘 한국인 AE 서울 본사 배치<br>
+	           직접 설명 및 리포트 가능 <br>
+	           실행 속도와 품질 향상 
+	       </p>
+	   </div>
+	</div>
+	<div class="col-md-6 col-sm-12">
+	       <div class="box-white">
+		<p class="ta-c"><img src="img/portfolio/54.png" alt=""></p>
+		<h4 class="ta-c">위챗 EC Hosting 플랫폼 개발<span></span></h4>
+		<p class="des">
+			2015년, 위챗 자동 운영 플랫폼 HZM 개발 <br>
+			Beacon 기술을 활용한 O2O 기술 개발
+		</p>
+	       </div>
+	</div>
+        </div>
+</div>
+</section>
+    </div>
+    <!-- //e:Account -->
+    <section>
+        <!-- s:campaign-list start -->
+        <div id="hsad_portfolio" class="container">
+            <div class="row title-wrap mt50">
+                <div class="col-lg-12">
+                    <h1>PORTFOLIO</h1>
+                </div>
+            </div>
+            <div class="row">
+                <!-- s:campaign-list -->
+                <div class="campaign-list" style="opacity: 1;">
+                   <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="case-study">
+                            <a href="javascript:void(0)">
+                                <div class="thumb">
+                                    <img src="img/portfolio/2.png" alt="">
+                                </div>
+                                <p class="tit"><span></span>대한항공이 당신의 미국 여행을 쏜다~</p>
+                                <span class="bg-gradation"></span>
+                            </a>
+                            <div class="detail">
+                                <p><span></span>대한항공</p>
+                                <div class="share" style="display:none;">
+                                    <a href="javascript:void(0)" title="해당 게시글 페이지로 이동"><img src="img/common/icon_enterance_long.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="card-tvc">
+                            <a href="javascript:void(0)">
+                                <div class="thumb">
+                                    <img src="img/portfolio/3.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <p class="tit">보물찾기 - O2O 이벤트</p>
+                                    <p class="cate"><span></span>인천공항</p>
+                                </div>
+                            </a>
+                            <div class="share" style="display:none;">
+                                <a href="javascript:void(0)" title="해당 게시글 페이지로 이동"><img src="img/common/icon_enterance.png" alt="" class="roll"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="card-tvc">
+                            <a href="javascript:void(0)">
+                                <div class="thumb">
+                                    <img src="img/portfolio/4.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <p class="tit">LET'S GO LUCKY GIRLS!</p>
+                                    <p class="cate"><span></span>대한항공 & 마펑우 Co-Promotion</p>
+                                </div>
+                            </a>
+                            <div class="share" style="display:none;">
+                                <a href="javascript:void(0)" title="해당 게시글 페이지로 이동"><img src="img/common/icon_enterance.png" alt="" class="roll"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="card-tvc">
+                            <a href="javascript:void(0)">
+                                <div class="thumb">
+                                    <img src="img/portfolio/5.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <p class="tit">장위안, 왕홍이 함께하는<br>백산수, 1달간의 변화</p>
+                                    <p class="cate"><span></span>백산수</p>
+                                </div>
+                            </a>
+                            <div class="share" style="display:none;">
+                                <a href="javascript:void(0)" title="해당 게시글 페이지로 이동"><img src="img/common/icon_enterance.png" alt="" class="roll"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="card-tvc">
+                            <a href="javascript:void(0)">
+                                <div class="thumb">
+                                    <img src="img/portfolio/6.png" alt="">
+                                </div>
+                                <div class="info">
+                                    <p class="tit">룰렛 이벤트</p>
+                                    <p class="cate"><span></span>하나은행</p>
+                                </div>
+                            </a>
+                            <div class="share" style="display:none;">
+                                <a href="javascript:void(0)" title="해당 게시글 페이지로 이동"><img src="img/common/icon_enterance.png" alt="" class="roll"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="case-study">
+                            <a href="javascript:void(0)">
+                                <div class="thumb">
+                                    <img src="img/portfolio/7.png" alt="">
+                                </div>
+                                <p class="tit"><span></span>청정원 바이럴<br>#你甜吗？ 웨이보 이벤트</p>
+                                <span class="bg-gradation"></span>
+                            </a>
+                            <div class="detail">
+                                <p><span></span>청정원</p>
+                                <div class="share" style="display:none;">
+                                    <a href="javascript:void(0)" title="해당 게시글 페이지로 이동"><img src="img/common/icon_enterance_long.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                <!-- //e:campaign-list -->
+            </div>
+            <div class="row ta-c pb80">
+                <div class="col-xs-12">
+                    <a href="sns_service.html" class="btn-more"><span>더보기</span></a>
+                </div>
+            </div>
+        </div>
+        <!-- s:campaign-list end -->
+    </section>
+
+
+     <!-- s:footer start -->
+    <footer id='footer'>
+        <div class="container">
+            <p>Copyright ⓒ HS Ad China Co., Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+     <!-- s:footer end -->
+
+</div><!-- END wrap-->
+</body>
+
+
+</html>

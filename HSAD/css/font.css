@@ -1,0 +1,77 @@
+/*
+ * Nanum Barun Gothic Web Fonts
+ * https://github.com/hiun/NanumBarunGothic
+ * Copyright (c) 2010, NAVER Corporation (http://www.nhncorp.com)
+ */
+
+@font-face {
+  font-family: 'Nanum Barun Gothic';
+  font-style: normal;
+  font-weight: 200;
+  src: url(../fonts/NanumBarunGothic/fonts/NanumBarunGothic/NanumBarunGothicUltraLight.eot); /*IE9 호환성 보기*/
+  src: local('Nanum Barun Gothic UltraLight'),
+       local('NanumBarunGothicUltraLight'),
+       url(../fonts/NanumBarunGothic/NanumBarunGothicUltraLight.eot?#iefix) format('embedded-opentype'),
+       url(../fonts/NanumBarunGothic/NanumBarunGothicUltraLight.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Nanum Barun Gothic';
+  font-style: normal;
+  font-weight: 300;
+  src: url(../fonts/NanumBarunGothic/NanumBarunGothicLight.eot);/*IE9 호환성 보기*/
+  src: local('Nanum Barun Gothic Light'),
+       local('NanumBarunGothicLight'),
+       url(../fonts/NanumBarunGothic/NanumBarunGothicLight.eot?#iefix) format('embedded-opentype'),
+       url(../fonts/NanumBarunGothic/NanumBarunGothicLight.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Nanum Barun Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/NanumBarunGothic/NanumBarunGothic.eot);/*IE9 호환성 보기*/
+  src: local('Nanum Barun Gothic'),
+       local('NanumBarunGothic'),
+       url(../fonts/NanumBarunGothic/NanumBarunGothic.eot?#iefix) format('embedded-opentype'),
+       url(../fonts/NanumBarunGothic/NanumBarunGothic.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Nanum Barun Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/NanumBarunGothic/NanumBarunGothicBold.eot);/*IE9 호환성 보기*/
+  src: local('Nanum Barun Gothic Bold'),
+       local('NanumBarunGothicBold'),
+       url(../fonts/NanumBarunGothic/NanumBarunGothicBold.eot?#iefix) format('embedded-opentype'),
+       url(../fonts/NanumBarunGothic/NanumBarunGothicBold.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'LGSmHanB';
+	src: url(../fonts/lgsmart/LGSmHanB.eot);/*IE9 호환성 보기*/
+	src: url(../fonts/lgsmart/LGSmHanB.eot?#iefix) format('embedded-opentype'),
+		url(../fonts/lgsmart/LGSmHanB.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'LGSmHanL';
+	src: url(../fonts/lgsmart/LGSmHanL.eot);/*IE9 호환성 보기*/
+	src: url(../fonts/lgsmart/LGSmHanL.eot?#iefix) format('embedded-opentype'),
+		url(../fonts/lgsmart/LGSmHanL.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'LGSmHanR';
+	src: url(../fonts/lgsmart/LGSmHanR.eot);/*IE9 호환성 보기*/
+	src: url(../fonts/lgsmart/LGSmHanR.eot?#iefix) format('embedded-opentype'),
+		url(../fonts/lgsmart/LGSmHanR.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'LGSmHanSB';
+	src: url(../fonts/lgsmart/LGSmHanSB.eot);/*IE9 호환성 보기*/
+	src: url(../fonts/lgsmart/LGSmHanSB.eot?#iefix) format('embedded-opentype'),
+		url(../fonts/lgsmart/LGSmHanSB.woff) format('woff');
+}
