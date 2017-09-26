@@ -1,0 +1,101 @@
+@charset "utf-8";
+.gate-wrap { width:100%; position:relative; overflow:hidden; padding-top:21px; padding-top:1.313rem; margin-top:-21px; margin-top:-1.313rem; }
+.gate-wrap li { width:25%; float:left; position:relative; }
+.gate-wrap li a { display:block; }
+.gate-wrap .gradient { position:absolute; width:100%; height:100%; top:0px; left:0px; }
+.circle { position:absolute; width:42px; height:42px; top:-21px; left:0px; right:0px; margin:0px auto; border:13px solid #fff; background:#0397d6; border-radius:21px; z-index:100; }
+.footer .copyright { color:#595959; font-size:12px; font-size:0.75rem; float:left; }
+.footer .qr-tag { color:#595959; font-size:14px; font-size:0.875rem; float:right; }
+.footer .qr-tag .address { margin-right:20px; margin-right:1.25rem; text-align:right; }
+.icon { padding-top:50px; padding-top:3.125rem; font-size:42px; font-size:2.625rem; position:absolute; top:71.61%; left:0px; right:0px; margin:0px auto; text-align:center; color:#fff; line-height: 1.19;
+    opacity:1;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+}
+.icon span { display:inline-block; }
+.icon.gate1 { background:url(../../images/bridge/icon_gate1.png) top center no-repeat; }
+.icon.gate2 { background:url(../../images/bridge/icon_gate2.png) top center no-repeat; }
+.icon.gate3 { background:url(../../images/bridge/icon_gate3.png) top center no-repeat; }
+.icon.gate4 { background:url(../../images/bridge/icon_gate4.png) top center no-repeat; }
+.btn-tag.active .icon.gate1 { display:none !important; }
+.btn-alert.active .icon.gate4 { display:none !important; }
+.tag-wrap { position:absolute; left:0px; top:0px; height:100%; width:100%; background:rgba(0, 0, 0, 0.6);
+    display:none;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+}
+.tag-wrap.active {
+    display:block;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+}
+.tag-wrap .tag { text-align:center; position:absolute; top:31.22%; left:0; right:0; margin-left:0px auto; }
+.tag-wrap .tag span { display:block; color:#fff; font-size:28px; font-size:1.75rem; }
+.tag-wrap .tag span.small { font-size:20px; font-size:1.25rem; }
+.alert-wrap { position:absolute; left:0px; top:0px; height:100%; width:100%; background:rgba(0, 0, 0, 0.6);
+    display:none;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+}
+.alert-wrap.active {
+    display:block;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+}
+.alert-wrap .alert { text-align:center; position:absolute; top:31.22%; left:0; right:0; margin-left:0px auto; }
+.alert-wrap .alert span { display:block; color:#fff; font-size:28px; font-size:1.75rem; }
+.alert-wrap .alert span.small { font-size:20px; font-size:1.25rem; }
+/******* media **********/
+/* IE8 only */
+@media \0screen {
+
+}
+@media (max-width:1440px){
+    .icon { padding-top:50px; padding-top:3.125rem; font-size:38px; font-size:2.375rem; position:absolute; top:67%; left:0px; right:0px; margin:0px auto; text-align:center; color:#fff; line-height: 1.19; }
+    .tag-wrap .tag { text-align:center; position:absolute; top:10.22%; left:0; right:0; margin-left:0px auto; }
+    .tag-wrap .tag span { display:block; color:#fff; font-size:25px; font-size:1.563rem; }
+    .tag-wrap .tag span.small { font-size:18px; font-size:1.125rem; }
+    .alert-wrap .alert { text-align:center; position:absolute; top:10.22%; left:0; right:0; margin-left:0px auto; }
+    .alert-wrap .alert span { display:block; color:#fff; font-size:25px; font-size:1.563rem; }
+    .alert-wrap .alert span.small { font-size:18px; font-size:1.125rem; }
+}
+@media (max-width:990px){
+    .gate-wrap { width:100%; position:relative; overflow:hidden; padding-top:0px; padding-top:0rem; margin-top:0px; margin-top:0rem; }
+    .gate-wrap li { width:100%; float:left; position:relative; }
+    .icon { padding-top:0px; padding-top:0rem; padding-left:60px; padding-left:3.75rem; font-size:38px; font-size:2.375rem; position:absolute; top:48%; bottom:0; left:52.8%; right:0; margin:auto; text-align:left; color:#fff; line-height: 1.19; }
+    .icon span { margin-top:0px !important; }
+    .icon.gate1 { background:url(../../images/bridge/icon_gate1.png) left top no-repeat; background-size:50px auto; }
+    .icon.gate2 { background:url(../../images/bridge/icon_gate2.png) left top no-repeat; background-size:50px auto; }
+    .icon.gate3 { background:url(../../images/bridge/icon_gate3.png) left top no-repeat; background-size:50px auto; }
+    .icon.gate4 { background:url(../../images/bridge/icon_gate4.png) left top no-repeat; background-size:50px auto; }
+    .tag-wrap .tag { text-align:center; position:absolute; top:0; left:0; right:0; margin:auto; top: calc(50% - 201px); }
+    .tag-wrap .tag span { display:block; color:#fff; font-size:25px; font-size:1.563rem; }
+    .tag-wrap .tag span.small { font-size:18px; font-size:1.125rem; }
+    .alert-wrap .alert { text-align:center; position:absolute; left:0; right:0; margin:auto; top: calc(50% - 160px);  }
+    .alert-wrap .alert span { display:block; color:#fff; font-size:25px; font-size:1.563rem; }
+    .alert-wrap .alert span.small { font-size:18px; font-size:1.125rem; }
+    .footer .copyright { color:#595959; font-size:12px; font-size:0.75rem; float:none; }
+    .footer .qr-tag { color:#595959; font-size:14px; font-size:0.875rem; float:left; width:75%; margin-right:5%}
+    .footer .qr-tag .address { margin-right:0px; margin-right:0rem; text-align:left; margin-bottom:5px; margin-bottom:0.313rem; }
+    .footer .qr { width:20%; }
+}
+@media (max-width:768px){
+    .icon { padding-top:0px; padding-top:0rem; padding-left:60px; padding-left:3.75rem; font-size:30px; font-size:1.875rem; position:absolute; top:48%; bottom:0; left:52.8%; right:0; margin:auto; text-align:left; color:#fff; line-height: 1.19; }
+}
+@media (max-width:480px){
+    .icon { padding-top:0px; padding-top:0rem; padding-left:40px; padding-left:2.5rem; font-size:20px; font-size:1.25rem; position:absolute; top:48%; bottom:0; left:52.8%; right:0; margin:auto; text-align:left; color:#fff; line-height: 1.19; }
+    .icon.gate1 { background:url(../../images/bridge/icon_gate1.png) left top no-repeat; background-size:30px auto; }
+    .icon.gate2 { background:url(../../images/bridge/icon_gate2.png) left top no-repeat; background-size:30px auto; }
+    .icon.gate3 { background:url(../../images/bridge/icon_gate3.png) left top no-repeat; background-size:30px auto; }
+    .icon.gate4 { background:url(../../images/bridge/icon_gate4.png) left top no-repeat; background-size:30px auto; }
+}

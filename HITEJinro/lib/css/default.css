@@ -1,0 +1,182 @@
+﻿@charset "utf-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosanssc.css);
+/*base*/
+html { font-size:16px !important; }
+body{height:100%; width:100%; text-align:left; font-size:18px; font-size:1.125rem; font-family:'Noto Sans SC', sans-serif, "Arial", "verdana" !important; color:#333333; font-weight:500; line-height:1; letter-spacing:-1px; -webkit-overflow-scrolling:touch; }
+body,p,h1,h2,h3,h4,h5,h6,table,caption,form,fieldset,legend,span,div,th,td,address{margin:0; padding:0; }
+ul,ol,li,dl,dt,dd{list-style:none; margin:0; padding:0px}
+img{border:0 none; line-height:0; font-size:0; vertical-align:top}
+table{border-collapse:collapse; border-spacing:0; width:100%}
+fieldset{border:0}
+legend, caption{width:0; height:0; text-indent:-10000px; font-size:0px; line-height:0px; position:absolute; left:-99999px; }
+textarea{border:2px solid #dbdbdc; padding:8px 10px !important; line-height:18px; resize:none; }
+input, textarea {vertical-align:middle; font-size:14px; color:#000; font-family:'Noto Sans SC', sans-serif, "Arial", "verdana" !important;; padding:0; margin:0}
+input[type="checkbox"] {width:17px; height:17px; }
+input[type="radio"] {width:13px; height:13px; border:none; }
+input[type="file"]{height:22px; color:#666; border:1px solid #d4d4d4; line-height:22px; vertical-align:middle; background:#fff}
+input.text{height:16px; padding:8px 10px; border:2px solid #dbdbdc; }
+input.date{margin:0 3px 0 0; width:110px}
+em {font-style:normal; }
+iframe {border:none; }
+strong {font-weight:500; }
+a,a:hover,a:focus {color:#000; text-decoration:none !important; }
+hr {border:0; border-top:1px solid #767676; margin:0; height:1px; }
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.valign {
+  font-size: 0;
+}
+
+.valign > [class*="col"] {
+  display: inline-block;
+  float: none;
+  font-size: 18px;
+  font-size: 1.125rem;
+  vertical-align: middle;
+}
+/* common */
+img{max-width:100%;}
+.fl-l {float:left !important; }
+.fl-r {float:right !important; }
+.cl-b {width:0; height:0; font-size:0; line-height:0; clear:both}
+.max {width:100%; }
+.show {display:block;}
+.hide {display:none;}
+.ta-c {text-align:center !important; }
+.ta-l {text-align:left !important; }
+.ta-r {text-align:right !important; }
+.tbl {border-collapse:collapse; border-spacing:0} /* 테이블 초기화 */
+.clear {display:block; overflow:visible; width:auto; clear:both; *zoom:1}
+.clear:after {display:block; visibility:hidden; height:0; font-size:0; clear:both; content:''}
+
+.mt10 {margin-top:10px;margin-top:0.625rem;}
+.mt20 {margin-top:20px;margin-top:1.25rem;}
+.mt30 {margin-top:30px;margin-top:1.875rem;}
+.mt40 {margin-top:40px;margin-top:2.5rem;}
+.mt45 {margin-top:45px;margin-top:2.813rem;}
+.mt50 {margin-top:50px;margin-top:3.125rem;}
+.mt60 {margin-top:60px;margin-top:3.75rem;}
+.mt70 {margin-top:70px;margin-top:4.375rem;}
+.mt80 {margin-top:80px;margin-top:5rem;}
+.mt90 {margin-top:90px;margin-top:5.625rem;}
+.mt100 {margin-top:100px;margin-top:6.25rem;}
+
+.mb10 {margin-bottom:10px;margin-bottom:0.625rem;}
+.mb20 {margin-bottom:20px;margin-bottom:1.25rem;}
+.mb30 {margin-bottom:30px;margin-bottom:1.875rem;}
+.mb40 {margin-bottom:40px;margin-bottom:2.5rem;}
+.mb50 {margin-bottom:50px;margin-bottom:3.125rem;}
+.mb60 {margin-bottom:60px;margin-bottom:3.75rem;}
+.mb70 {margin-bottom:70px;margin-bottom:4.375rem;}
+.mb80 {margin-bottom:80px;margin-bottom:5rem;}
+.mb90 {margin-bottom:90px;margin-bottom:5.625rem;}
+.mb100 {margin-bottom:100px;margin-bottom:6.25rem;}
+
+.pt10 {padding-top:10px;padding-top:0.625rem;}
+.pt20 {padding-top:20px;padding-top:1.25rem;}
+.pt30 {padding-top:30px;padding-top:1.875rem;}
+.pt40 {padding-top:40px;padding-top:2.5rem;}
+.pt50 {padding-top:50px;padding-top:3.125rem;}
+.pt60 {padding-top:60px;padding-top:3.75rem;}
+.pt70 {padding-top:70px;padding-top:4.375rem;}
+.pt80 {padding-top:80px;padding-top:5rem;}
+.pt90 {padding-top:90px;padding-top:5.625rem;}
+.pt100 {padding-top:100px;padding-top:6.25rem;}
+.pt120 {padding-top:120px;padding-top:7.5rem;}
+
+.pb10 {padding-bottom:10px;padding-bottom:0.625rem;}
+.pb20 {padding-bottom:20px;padding-bottom:1.25rem;}
+.pb30 {padding-bottom:30px;padding-bottom:1.875rem;}
+.pb40 {padding-bottom:40px;padding-bottom:2.5rem;}
+.pb50 {padding-bottom:50px;padding-bottom:3.125rem;}
+.pb60 {padding-bottom:60px;padding-bottom:3.75rem;}
+.pb70 {padding-bottom:70px;padding-bottom:4.375rem;}
+.pb80 {padding-bottom:80px;padding-bottom:5rem;}
+.pb90 {padding-bottom:90px;padding-bottom:5.625rem;}
+.pb100 {padding-bottom:100px;padding-bottom:6.25rem;}
+.pb120 {padding-bottom:120px;padding-bottom:7.5rem;}
+
+.of-hi {overflow:hidden; }
+.bg-fff {background:#ffffff; }
+.no-border {border:none; }
+
+/*radio, checkbox custom style*/
+.check,
+.radio { padding:0px; }
+.radio { display:inline-block; padding-left:26px; margin-right:10px; height:18px; cursor:pointer; vertical-align:text-top; background:url(../../images/common/btn_radio_off.png) no-repeat center left; background-size:18px 18px; color:#000; }
+.check { display:inline-block; padding-left:10px; margin-right:10px; line-height:18px; height:16px; cursor:pointer; vertical-align:text-top; background:url(../../images/common/btn_checkbox_off.gif) no-repeat center left; background-size:16px 16px; }
+label.c-on { background:url(../../images/common/btn_checkbox_on.gif) no-repeat center left; background-size:16px 16px; }
+label.r-on { background:url(../../images/common/btn_radio_on.png) no-repeat center left; background-size:18px 18px; }
+label{ margin:0; line-height:21px; letter-spacing:-0.5px; }
+.check input { position:absolute; left:-9999px; }
+.radio-txt { padding:0 17px 0 7px; }
+/* selectbox */
+.select-wrap{position:relative; display:inline-block; }
+.selectbox{padding:8px 12px; width:99.7%; height:34px; font-size:14px; line-height:14px; display:block; cursor:pointer; border:none; border:1px solid #cbcbcb; color:#5b5b5b; background:#fff url(../../images/common/btn_selectBox.gif) no-repeat right center; }
+div.selectbox-wrapper{position:absolute; background-color:white; border:1px solid #cbcbcb; margin:0; padding:0; text-align:left; *height:60px; /*IE6 fix */ overflow-y:auto; z-index:1; max-height:300px; }
+div.selectbox-wrapper ul li.selected{background-color:#fff}
+div.selectbox-wrapper ul li.current{background-color:#ddd}
+div.selectbox-wrapper ul li{list-style-type:none; display:block; margin:0; padding:2px 5px 2px 10px; cursor:pointer; font-size:14px; line-height:28px; }
+html:first-child select{padding-right:6px; height:20} /* Opera 9 & Below Fix */
+/* selectbox 디자인만 */
+select:not(.no-style) {
+  font-family:inherit;  /* 폰트 상속 */
+  border-radius:0px; /* iOS 둥근모서리 제거 */
+  -webkit-appearance:none; /* 네이티브 외형 감추기 */
+  -moz-appearance:none;
+  appearance:none;
+  outline:0;
+}
+/* IE 10, 11의 네이티브 화살표 숨기기 */
+select::-ms-expand {
+  display:none;
+}
+.input-box { position:relative; }
+.input-box label {
+  position:absolute;
+  top:1px;  /* input 요소의 border-top 설정값 만큼 */
+  left:1px;  /* input 요소의 border-left 설정값 만큼 */
+  padding:7px 11px;  /* input 요소의 padding 값 만큼 */
+  color:#999;
+  cursor:text;
+}
+/*input*/
+input[type="text"],
+input[type="password"],
+input[type="tel"] {
+  height:auto;  /* 높이 초기화 */
+  line-height:normal;  /* line-height 초기화 */
+  padding:8px 7%;  /* 여백 설정 */
+  border:none;
+  width:85%;
+  border:1px solid #cbcbcb;
+  font-size:13px;
+  font-weight:500;
+  font-family:inherit;
+  border-radius:0;  /* iSO 둥근모서리 제거 */
+  outline-style:none;  /* 포커스시 발생하는 효과 제거를 원한다면 */
+  -webkit-appearance:none;  /* 브라우저별 기본 스타일링 제거 */
+  -moz-appearance:none;
+  appearance:none;
+}
+/*textarea*/
+textarea {width:100%; border:1px solid #dfdfdf; }
+/* blind */
+.blind{width:0; height:0; text-indent:-10000px; font-size:0px; line-height:0px; position:absolute; left:-99999px; }
+.blind table{text-indent:-10000px}
+/* 스크롤 매직 */
+[class *= 'effect-'] .obj {
+    position:relative; width:100%; opacity:0;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+ }
+[class *= 'effect-'].on .obj { margin-left:0; margin-top:0; opacity:1; }
+.slide-left { margin-left:-20%; }
+.slide-right { margin-left:20%; }
+.slide-top { margin-top:-20%; }
+.slide-bottom { margin-top:20%; }

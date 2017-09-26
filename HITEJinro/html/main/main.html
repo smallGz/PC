@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HITE Jinro</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="HITE Jinro" />
+	<meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0 user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link href="../../lib/css/default.css" rel="stylesheet" />
+    <link href="../../lib/css/bootstrap.css" rel="stylesheet" />
+    <link href="../../lib/css/layout.css" rel="stylesheet" />
+    <link href="../../lib/css/main.css" rel="stylesheet" />
+    <link href="../../lib/css/contents.css" rel="stylesheet" />
+    <script src="../../lib/js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="../../lib/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../../lib/js/respond-image.js" type="text/javascript"></script>
+    <script src="../../lib/js/jquery.bxslider.js" type="text/javascript"></script>
+    <script src="../../lib/js/ScrollMagic.js" type="text/javascript"></script>
+    <script src="../../lib/js/plugins/debug.addIndicators.js" type="text/javascript"></script>
+    <!--[if lt IE 9]>
+        <script src="../../lib/js/respond.min.js"></script>
+        <script src="../../lib/js/html5.js"></script>
+    <![endif]-->
+    <script src="../../lib/js/default.js" type="text/javascript"></script>
+    <script src="../../lib/js/ui.js" type="text/javascript"></script>
+</head>
+<body>
+    <!-- s:header -->
+    <header id="headerWrap">
+        <div class="gnb-bg"></div>
+        <div class="gnb-wrap visible-lg visible-md">
+            <div class="row">
+                <ul class="gnb">
+
+                    <li class="logo"><a href="#"><img src="../../images/common/logo.jpg" alt=""></a></li>
+
+                </ul>
+                <div class="sns">
+                    <div class="mo-header">
+                        <a href="#" class="btn-gnb-close"></a>
+                    </div>
+                    <a href="#" class="btn-wechat"></a>
+                    <a href="http://weibo.com/p/1006062453063853/home?from=page_100606&mod=TAB&is_all=1#place" class="btn-weibo"></a>
+                    <div class="qr">
+                        <img src="../../images/common/img_qr.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="gnb-warp-mo visible-sm visible-xs">
+            <a href="#"><img src="../../images/common/logo.jpg" alt=""></a>
+            <a href="#" class="btn-gnb-open"></a>
+        </div>
+    </header>
+    <!-- //e:header -->
+    <!-- s:wrap -->
+    <div id="wrap">
+        <div class="visual-menu" id="visual-menu">
+            <ul>
+                <li style="background-image:url(../../images/main/1_1.jpg);">
+    				<a href=""><strong><em><span>烧酒<br>饮用法</span></em></strong>
+    					<video class="" loop="loop" muted="muted" preload="auto" src="../../images/main/01drink.mp4" style="width: 1831.11px; height: 1030px;"></video>
+    				</a>
+    			</li>
+    			<li style="background-image:url(../../images/main/2_1.jpg);">
+    				<a href=""><strong><em><span>HITEJINRO<br>HISTORY</span></em></strong>
+    					<video class="" loop="loop" muted="muted" preload="auto" src="../../images/main/02hitejinro_history.mp4" style="width: 1831.11px; height: 1030px;"></video>
+    				</a>
+    			</li>
+    			<li style="background-image:url(../../images/main/3_1.jpg);">
+    				<a href=""><strong><em><span>真露<br>Fresh</span></em></strong>
+    					<video class="" loop="loop" muted="muted" preload="auto" src="../../images/main/03soju_tvcm.mp4" style="width: 1831.11px; height: 1030px;"></video>
+    				</a>
+    			</li>
+    			<li style="background-image:url(../../images/main/4_1.jpg);">
+
+    				<a href=""><strong><em><span>ABOUT<br>烧酒</span></em></strong>
+    					<video class="" loop="loop" muted="muted" preload="auto" src="../../images/main/04soju_line.mp4" style="width: 1831.11px; height: 1030px;"></video>
+    				</a>
+    			</li>
+    			<li style="background-image:url(../../images/main/5_1.jpg);">
+    				<a href=""><strong><em><span>HITE<br>BEER</span></em></strong>
+    					<video class="" loop="loop" muted="muted" preload="auto" src="../../images/main/05hite_tvcm.mp4" style="width: 1831.11px; height: 1030px;"></video>
+    				</a>
+    			</li>
+    		</ul>
+    	</div>
+        <script type="text/javascript">
+            $(document).ready(function(e){
+                $(window).on('resize',function(e){
+                    var videoW = $('.visual-menu li').width();
+                    if($(window).width() < 900){
+                        $('.visual-menu li video').width(videoW);
+                    }else{
+                        $('.visual-menu li video').width(1920);
+                    }
+                }).resize();
+                var currentVideoNum;
+                $('.visual-menu li a').on('mouseenter',function(e){
+                    var _index = $(this).parent().index();
+                    if($(window).width() > 900){
+                        currentVideoNum = _index;
+                        $(this).find('video').get(0).play();
+                    }
+                }).on('mouseleave',function(e){
+                    $(this).find('video').get(0).pause();
+                }).on('click',function(e){
+                    var _index = $(this).parent().index();
+                    e.preventDefault();
+                    if($(window).width() < 900){
+                        if(currentVideoNum == _index){
+                            //alert("link");
+                        }else{
+                            e.preventDefault();
+                            currentVideoNum = _index;
+                            $('.visual-menu li a video').get(0).pause();
+                            $(this).find('video').get(0).play();
+                        }
+                    }
+                });
+            });
+        </script>
+        <div class="container-fluid history-wrap base">
+            <div class="container">
+                <h1>烧酒的历史<span></span></h1>
+                <div class="row mt90 visual">
+                    <div class="col-md-6 col-xs-12 effect-2">
+                        <img class="slide-left obj" src="../../images/page/img_history1.png" alt="">
+                        <p class="mt50 mb50 slide-bottom obj">据10世纪阿拉伯炼金术师流传下来的蒸馏法记载，当时便已有与烧酒相似的蒸馏酒的相关记录。据传烧酒于高丽时代后期从蒙古传入韩国。</p>
+                        <img class="slide-bottom obj" src="../../images/page/img_history2.png" alt="">
+                    </div>
+                    <div class="col-md-6 col-xs-12 history-right effect-3">
+                        <img class="slide-right obj" src="../../images/page/img_history3.png" alt="">
+                        <p class="mt50 mb50 slide-right obj">早期的烧酒为蒸馏式烧酒, 现在的稀释式烧酒始于19世纪连续式蒸馏器诞生，日帝时代随着韩国酒精工厂的创办而随之产生。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid iu-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-xs-12 iu-right pull-right effect-4">
+                        <p class="slide-right obj">
+                            烧酒广告强调纯净与潮流的理念,
+                            只起用韩国当代最棒的美女明星为其代言<br><br>
+
+                            2014年至今，真露邀请歌手IU为其代言，真露纯净的味道与IU特有的亲近感和纯洁感相得益彰，在韩国烧酒市场独占鳌头。
+                        </p>
+                    </div>
+                    <div class="col-md-6 col-xs-12 effect-5">
+                        <img class="slide-left obj" src="../../images/page/img_iu.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid representation-wrap base">
+            <div class="container">
+                <h1>‘真露’是当今全球最畅销的蒸馏酒<span></span></h1>
+                <div class="row mt90">
+                    <div class="col-md-12">
+                        <ul class="representation-slider">
+                            <li>
+                                <img class="bottom" src="../../images/page/img_representation1.png" data-src-base='../../images/page/' data-src='<768:img_representation1_mo.png, >768:img_representation1.png' alt="">
+                            </li>
+                            <li>
+                                <img class="bottom" src="../../images/page/img_representation2.png" data-src-base='../../images/page/' data-src='<768:img_representation2_mo.png, >768:img_representation2.png' alt="">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function(e){
+                var representationSlider;
+                $(window).load(function(e){
+                    setTimeout(function(){
+                        representationSlider = $('.representation-slider').bxSlider({
+                            mode: 'fade',
+                            auto: true,
+                            responsive:true,
+                            autoControls: false,
+                            onSlideBefore : function($slideElement, oldIndex, newIndex){ // your code here
+                              //console.log(newIndex);
+                              if(newIndex == 1){
+                                  $('.representation-wrap').addClass('twice');
+                              }else{
+                                  $('.representation-wrap').removeClass('twice');
+                              }
+                            }
+                        });
+                    }, 500);
+                    $(window).on('resize',function(e){
+                        if(representationSlider.length > 0){
+                            representationSlider.destroySlider();
+                            representationSlider.reloadSlider({
+                                mode: 'fade',
+                                auto: true,
+                                responsive:true,
+                                autoControls: false,
+                                onSlideBefore : function($slideElement, oldIndex, newIndex){ // your code here
+                                  //console.log(newIndex);
+                                  if(newIndex == 1){
+                                      $('.representation-wrap').addClass('twice');
+                                  }else{
+                                      $('.representation-wrap').removeClass('twice');
+                                  }
+                                }
+                            });
+                        }
+                    })
+                });
+            });
+        </script>
+        <div class="container-fluid marketing-wrap base">
+            <div class="container">
+                <h1>营销案例<span></span></h1>
+                <div class="row mt90">
+                    <ul class="marketing-slider">
+                        <li><img class="max" src="../../images/page/img_marketing1.jpg" data-src-base='../../images/page/' data-src='<768:img_marketing1_mo.jpg, >768:img_marketing1.jpg' alt=""></li>
+                        <li><img class="max" src="../../images/page/img_marketing2.jpg" data-src-base='../../images/page/' data-src='<768:img_marketing2_mo.jpg, >768:img_marketing2.jpg' alt=""></li>
+                        <li><img class="max" src="../../images/page/img_marketing3.jpg" data-src-base='../../images/page/' data-src='<768:img_marketing3_mo.jpg, >768:img_marketing3.jpg' alt=""></li>
+                        <li><img class="max" src="../../images/page/img_marketing4.jpg" data-src-base='../../images/page/' data-src='<768:img_marketing4_mo.jpg, >768:img_marketing4.jpg' alt=""></li>
+                        <li><img class="max" src="../../images/page/img_marketing5.jpg" data-src-base='../../images/page/' data-src='<768:img_marketing5_mo.jpg, >768:img_marketing5.jpg' alt=""></li>
+                        <li><img class="max" src="../../images/page/img_marketing6.jpg" data-src-base='../../images/page/' data-src='<768:img_marketing6_mo.jpg, >768:img_marketing6.jpg' alt=""></li>
+                        <li><img class="max" src="../../images/page/img_marketing7.jpg" data-src-base='../../images/page/' data-src='<768:img_marketing7_mo.jpg, >768:img_marketing7.jpg' alt=""></li>
+                        <li><img class="max" src="../../images/page/img_marketing8.jpg" data-src-base='../../images/page/' data-src='<768:img_marketing8_mo.jpg, >768:img_marketing8.jpg' alt=""></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function(e){
+                var marketingSlider;
+                $(window).load(function(e){
+                    setTimeout(function(){
+                        marketingSlider = $('.marketing-slider').bxSlider({
+                            mode: 'fade',
+                            auto: true,
+                            autoControls: false
+                        });
+                    }, 500);
+                    $(window).on('resize',function(e){
+                        if(marketingSlider.length > 0){
+                            marketingSlider.destroySlider();
+                            marketingSlider.reloadSlider({
+                                mode: 'fade',
+                                auto: true,
+                                autoControls: false
+                            });
+                        }
+
+                    })
+                });
+            });
+        </script>
+        <div class="container-fluid lineup-wrap base">
+            <div class="container">
+                <h1>烧酒产品阵容<span></span></h1>
+                <p class="ta-c mt50 desc">韩国第一酒——烧酒，为满足消费者口味的多样性，不断开拓进取，研发新口味和全新品牌，力求打造挑灵动与挑战性并存的年轻干练新形象。</p>
+                <div class="row mt50">
+                    <div class="col-md-12">
+                        <ul class="lineup">
+                            <li>
+                                <a href="#">
+                                    <div class="full">
+                                        <div class="title">真露<br>Classic</div>
+                                        <img class="max" src="../../images/page/img_lineup_product1.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="full">
+                                        <div class="title">真露<br>Fresh</div>
+                                        <img class="max" src="../../images/page/img_lineup_product2.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="full">
+                                        <div class="title">一品真露</div>
+                                        <img class="max" src="../../images/page/img_lineup_product3.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="full">
+                                        <div class="title">柚子<br>烧酒</div>
+                                        <img class="max" src="../../images/page/img_lineup_product4.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="full">
+                                        <div class="title">青葡萄<br>烧酒</div>
+                                        <img class="max" src="../../images/page/img_lineup_product5.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function(e){
+                var bgColorArr = ["#93928b","#014b6b","#797979","#7f3939","#376512"];
+                $('.lineup').on('mouseenter',function(e){
+                    $('.lineup-wrap').addClass('active');
+                }).on('mouseleave',function(e){
+                    $('.lineup-wrap').removeClass('active');
+                    $('.lineup-wrap').css({'background-color':'#f1f1f1','background-image':'none'});
+                });
+                $('.lineup li a').on('mouseenter',function(e){
+                    var _index = $(this).parent().index();
+                    currentLineNum = _index;
+                    if($(window).width() > 990){
+                        $('.lineup-wrap').css({'background-color':bgColorArr[_index],'background-image':"url(../../images/page/bg_lineup"+(_index+1)+".jpg)"});
+                    }else{
+                        $('.lineup-wrap').css({'background-color':bgColorArr[_index],'background-image':"url(../../images/page/bg_lineup"+(_index+1)+"_mo.jpg)"});
+                    }
+                });
+                var moTimer;
+                var currentLineNum = 0;
+                var totalLineNum = 4;
+                $(window).on('resize',function(e){
+                    if($(window).width() < 990){
+                        $('.lineup li').eq(currentLineNum).find('a').trigger('mouseenter');
+                        clearInterval(moTimer);
+                        moTimer = setInterval(function(){
+                            if(currentLineNum < totalLineNum){
+                                currentLineNum++;
+                            }else{
+                                currentLineNum = 0;
+                            }
+                            $('.lineup li').eq(currentLineNum).find('a').trigger('mouseenter');
+                        },3000);
+                    }else{
+                        clearInterval(moTimer);
+                    }
+                }).resize();
+            });
+        </script>
+        <script>
+            // init controller
+            var controller = new ScrollMagic.Controller({globalSceneOptions: {duration: 100}});
+            //sceneAdd('.effect-1');
+            sceneAdd('.effect-2');
+            sceneAdd('.effect-3');
+            sceneAdd('.effect-4');
+            sceneAdd('.effect-5');
+            function sceneAdd(_selector){
+                // build scenes
+                new ScrollMagic.Scene({triggerElement: _selector,offset:0})
+                                .removeIndicators()
+                                .addTo(controller)
+                                .on("progress", function (e) {
+                                    if(e.progress.toFixed(3) > 0){
+                                        $(_selector).addClass('on');
+                                    }else{
+                                        $(_selector).removeClass('on');
+                                    }
+                                });
+            }
+        </script>
+    </div>
+    <!-- //e:wrap -->
+    <!-- s:footer -->
+    <footer id="footerWrap">
+        <div class="footer ta-c">
+            <p>海特真露株式会社 / 韩国总部 地址 : 首尔特别市 江南区 岭东大路 714（清潭洞）/ 办公电话 :（82）080-210-0150<br>
+                Copyright© 2017 HITEJINRO CO.LTD. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- //e:footer -->
+</body>
+</html>
